@@ -167,7 +167,7 @@ const ContactUs = () => {
                     <ErrorMessage
                       name="email"
                       component="div"
-                     className="text-[#ff0000]"
+                      className="text-[#ff0000]"
                     />
                   </div>
                   <div className="flex flex-col">
@@ -201,7 +201,7 @@ const ContactUs = () => {
                   <ErrorMessage
                     name="subject"
                     component="div"
-                     className="text-[#ff0000]"
+                    className="text-[#ff0000]"
                   />
                 </div>
                 <div className="mt-5 flex flex-col">
@@ -212,12 +212,12 @@ const ContactUs = () => {
                   <Field
                     as="textarea"
                     name="message"
-                    className={`${fieldClass} h-[115px] w-full`}
+                    className={`h-[115px] w-full rounded-lg border border-[#a5a5a5] px-2 py-3 outline-none lg:mt-2 lg:min-w-[270px]`}
                   />
                   <ErrorMessage
                     name="message"
                     component="div"
-                     className="text-[#ff0000]"
+                    className="text-[#ff0000]"
                   />
                 </div>
                 <div className="mt-5">

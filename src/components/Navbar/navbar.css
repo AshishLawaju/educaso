@@ -1,0 +1,55 @@
+
+
+
+
+
+.navbarx{
+    position: relative;
+  }
+  .navbarx::after {
+   
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0px;
+    bottom: -4px;
+    left: 0;
+   
+    /* transition: 0.3s ease-in-out; */
+    background-color: rgba(9, 17, 124, 1);
+    /* background-color: rgba(189, 182, 205, 0.818) ; */
+    border-radius: 10px;
+
+  
+  }
+  .navbarx:hover{
+
+      color:rgba(9, 17, 124, 1);
+  }
+  
+  
+  .navbarx:hover::after {
+    width: 50%;
+  }
+  /* .navbarx:hover {
+    color: #3e01f3;
+    border-radius: 10px;
+  
+  } */
+  
+  
+  
+  .activeNav::after{
+    content: "";
+    position: absolute; 
+    height: 3px;
+    width: 50%;
+    bottom: -4px;
+    left: 0;
+   
+    background-color: rgba(9, 17, 124, 1);
+    border-radius: 10px;
+    color:rgba(9, 17, 124, 1);
+  
+  }
+  

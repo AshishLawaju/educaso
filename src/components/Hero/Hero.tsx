@@ -1,5 +1,5 @@
 import hero from "./assets/hero.webp";
-import hero2 from "./assets/hero.png";
+
 import Image from "next/image";
 import Button from "../common/button/Button";
 import Capital from "../Capital/Capital";
@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="py-8">
       <div
         className="container h-[90vh] rounded-3xl bg-cover bg-center"
-        style={{ backgroundImage: `url(${hero2.src})` }}
+        style={{ backgroundImage: `url(${hero.src})` }}
       >
         <div className="pl-12 pt-[12%]">
           <h1 className="main-heading font-raleway">

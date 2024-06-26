@@ -9,7 +9,8 @@ import testi14 from "./assets/testi14.jpg";
 import testi15 from "./assets/testi15.jpg";
 import testi16 from "./assets/testi16.jpg";
 import Capital from "../Capital/Capital";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const Testimonials = () => {
   const testimonialsList = [
     {

@@ -6,8 +6,10 @@ import { IoIosArrowDown, IoIosArrowDropleft } from "react-icons/io";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowRight, MdOutlineArrowDropDown } from "react-icons/md";
 import "./navbar.css";
+import { FiAlignRight } from "react-icons/fi";
+import { GiCrossedBones } from "react-icons/gi";
 const Navbar = () => {
   const pathname = usePathname();
   const navLinks = [
@@ -86,16 +88,19 @@ const Navbar = () => {
   const testLink = ["IELTS", "PTE", "Duolingo", "Korean", "Japanese"];
   const [extendedNav, setExtendedNav] = useState("");
   const [extendedNav2, setExtendedNav2] = useState(false);
+  const [smallNav, setSmallNav] = useState(false);
+  const [smallExtendedNav, setSmallExtendedNav] = useState("");
+  const [smallExtendedNav2, setSmallExtendedNav2] = useState("");
   return (
-    <nav className="bg-[#fffffe] shadow-sm sticky top-0 z-50">
-      <div className="container py-[27px]; flex justify-between items-center relative">
-        <div className="h-[36px] w-[132px] cursor-pointer ">
+    <nav className="sticky top-0 z-50 bg-[#fffffe] shadow-sm">
+      <div className="py-[27px]; container relative flex items-center justify-between">
+        <div className="h-[36px] w-[132px] cursor-pointer">
           <Link href={"/"}>
-            <Image src={logo} alt="educaso" className="w-full h-full"></Image>
+            <Image src={logo} alt="educaso" className="h-full w-full"></Image>
           </Link>
         </div>
 
-        <ul className="flex items-center gap-x-8 text-[16px] text-span-black whitespace-nowrap relative">
+        <ul className="relative flex items-center gap-x-8 whitespace-nowrap text-[16px] text-span-black max-lg:hidden">
           {/*  <li className="cursor-pointer">Home</li>
           <li className="cursor-pointer">About Us</li>
           <li className="cursor-pointer flex gap-2 items-center">
@@ -113,14 +118,14 @@ const Navbar = () => {
             <>
               {navLink.link ? (
                 <Link href={navLink.link}>
-                  <li className="cursor-pointer navbarx" key={navLink.name}>
+                  <li className="navbarx cursor-pointer" key={navLink.name}>
                     {navLink.name}
                   </li>
                 </Link>
               ) : (
                 <>
                   <li
-                    className="cursor-pointer navbarx flex gap-2 items-center  py-[30px]"
+                    className="navbarx flex cursor-pointer items-center gap-2 py-[30px]"
                     key={navLink.name}
                     onMouseEnter={() => {
                       setExtendedNav(navLink.name);
@@ -142,12 +147,12 @@ const Navbar = () => {
                       onMouseLeave={() => {
                         setExtendedNav("");
                       }}
-                      className="absolute top-20 left-[20%] rounded-xl bg-[#fffffe] text-[12px] text-[#000000]  paragraph-span-small"
+                      className="paragraph-span-small absolute left-[20%] top-20 rounded-xl bg-[#fffffe] text-[12px] text-[#000000]"
                     >
-                      <div className="flex flex-col  ">
+                      <div className="flex flex-col">
                         {serviceLink.map((service) => (
                           <p
-                            className="border-b border-[#e8e8e8] px-[44px] py-[10px] cursor-pointer"
+                            className="cursor-pointer border-b border-[#e8e8e8] px-[44px] py-[10px]"
                             key={service}
                           >
                             {service}
@@ -165,12 +170,12 @@ const Navbar = () => {
                       onMouseLeave={() => {
                         setExtendedNav("");
                       }}
-                      className="absolute  top-20 left-[40%] rounded-xl bg-[#fffffe] text-[12px] text-[#000000]  paragraph-span-small"
+                      className="paragraph-span-small absolute left-[40%] top-20 rounded-xl bg-[#fffffe] text-[12px] text-[#000000]"
                     >
-                      <div className="flex flex-col  ">
+                      <div className="flex flex-col">
                         {studyLink.map((Study: any) => (
                           <p
-                            className="  relative border-b   border-[#e8e8e8] px-[44px] py-[10px] cursor-pointer flex gap-2 items-center"
+                            className="relative flex cursor-pointer items-center gap-2 border-b border-[#e8e8e8] px-[44px] py-[10px]"
                             key={Study.name}
                             onMouseEnter={() => {
                               if (Study.name == "Study in Europe") {
@@ -185,17 +190,17 @@ const Navbar = () => {
 
                             {Study.sublink && (
                               <>
-                                <MdKeyboardArrowRight className=" text-sm" />
+                                <MdKeyboardArrowRight className="text-sm" />
                                 {extendedNav2 && (
-                                  <div className="absolute -right-[95%] top-0  bg-[#fffffe] rounded-r-xl ">
+                                  <div className="absolute -right-[95%] top-0 rounded-r-xl bg-[#fffffe]">
                                     {Study.sublink &&
                                       Study.sublink.map((stu: any) => (
                                         <div
-                                          className="border-b   border-[#e8e8e8]"
+                                          className="border-b border-[#e8e8e8]"
                                           key={stu}
                                         >
                                           <p
-                                            className=" px-[44px] py-[10px]"
+                                            className="px-[44px] py-[10px]"
                                             key={stu}
                                           >
                                             {stu}
@@ -220,12 +225,12 @@ const Navbar = () => {
                       onMouseLeave={() => {
                         setExtendedNav("");
                       }}
-                      className="absolute top-20 left-[62%] rounded-xl bg-[#fffffe] text-[12px] text-[#000000]  paragraph-span-small"
+                      className="paragraph-span-small absolute left-[62%] top-20 rounded-xl bg-[#fffffe] text-[12px] text-[#000000]"
                     >
-                      <div className="flex flex-col  ">
+                      <div className="flex flex-col">
                         {testLink.map((service) => (
                           <p
-                            className="border-b border-[#e8e8e8] px-[44px] py-[10px] cursor-pointer"
+                            className="cursor-pointer border-b border-[#e8e8e8] px-[44px] py-[10px]"
                             key={service}
                           >
                             {service}
@@ -240,9 +245,115 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <button className=" py-3 px-[22px] rounded-xl  whitespace-nowrap text-background  bg-gradient-to-b from-[#4453DD] to-[#09117C]">
+        <button className="whitespace-nowrap rounded-xl bg-gradient-to-b from-[#4453DD] to-[#09117C] px-[22px] py-3 text-background max-lg:hidden">
           Contact Us
         </button>
+        <div className="lg:hidden">
+          {smallNav ? (
+            <GiCrossedBones
+              className="cursor-pointer text-[19px] text-primary"
+              onClick={() => setSmallNav((pre) => !pre)}
+            />
+          ) : (
+            <FiAlignRight
+              className="cursor-pointer text-[24px] text-primary"
+              onClick={() => setSmallNav((pre) => !pre)}
+            />
+          )}
+        </div>
+      </div>
+      <div className="lg:hidden">
+        {true && (
+          <div
+            className={`absolute left-0 top-9 flex w-full flex-col justify-center bg-[#fffffe] p-4 ${smallNav ? "translate-x-0 opacity-100 transition-all duration-300 ease-in-out" : "translate-x-[999px] overflow-hidden opacity-0 transition-all duration-300 ease-in-out"} -z-10`}
+          >
+            <div className="container">
+              {navLinks.map((navlink) => (
+                <div
+                  className=""
+                  key={navlink.name}
+                  onClick={() => setSmallExtendedNav(navlink.name)}
+                >
+                  <p className="flex cursor-pointer items-center gap-1">
+                    {navlink.name}
+
+                    {!navlink.link && (
+                      <>
+                        <MdOutlineArrowDropDown className="text-[24px]" />
+                      </>
+                    )}
+                  </p>
+
+                  {
+                    <>
+                      {smallExtendedNav == "Services" &&
+                        navlink.name == "Services" && (
+                          <ul className="ml-3 text-sm font-light">
+                            {serviceLink.map((serv) => (
+                              <li key={serv} className="border-b p-1">
+                                {serv}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                    </>
+                  }
+                  {
+                    <>
+                      {smallExtendedNav == "Study Abroad" &&
+                        navlink.name == "Study Abroad" && (
+                          <ul className="ml-3 text-sm font-light">
+                            {studyLink.map((serv) => (
+                              <li
+                                key={serv.name}
+                                className="border-b p-1"
+                                onClick={() => setSmallExtendedNav2(serv.name)}
+                              >
+                                <div className="flex items-center gap-1">
+                                  {serv.name}
+                                  {serv.sublink && (
+                                    <MdOutlineArrowDropDown className="text-[24px]" />
+                                  )}
+                                </div>
+                                {serv.sublink  && (
+                                  <>
+                                    {smallExtendedNav2 == "Study in Europe" &&
+                                      navlink.name == "Study Abroad" && (
+                                        <>
+                                          {serv.sublink.map((ser) => (
+                                            <p key={ser} className="ml-4">
+                                              {ser}
+                                            </p>
+                                          ))}
+                                        </>
+                                      )}
+                                  </>
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                    </>
+                  }
+                  {
+                    <>
+                      {smallExtendedNav == "Test Preparation" &&
+                        navlink.name == "Test Preparation" && (
+                          <ul className="ml-3 text-sm font-light">
+                            <li className="border-b p-1">IELTS</li>
+                            <li className="border-b p-1">PTE</li>
+                            <li className="border-b p-1">Duolingo</li>
+                            <li className="border-b p-1">Korean</li>
+                            <li className="border-b p-1">Japanese</li>
+                          </ul>
+                        )}
+                    </>
+                  }
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

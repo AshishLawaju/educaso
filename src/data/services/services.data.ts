@@ -1,0 +1,15 @@
+const servicesData = [
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+  { title: "Language Preparation", description: "", info: [], conclusion: "" },
+];

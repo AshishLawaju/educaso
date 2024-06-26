@@ -33,7 +33,7 @@ const Navbar = () => {
     },
     {
       name: "Universities",
-      link: "/universitites",
+      link: "/universities",
     },
   ];
 

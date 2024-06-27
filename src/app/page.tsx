@@ -1,5 +1,6 @@
 import BlogPage from "@/components/blog/BlogPage";
 import Capital from "@/components/Capital/Capital";
+import BreadCum from "@/components/common/breadcum/BreadCum";
 import Footer from "@/components/common/footer/Footer";
 import ContactBanner from "@/components/contactbanner/ContactBanner";
 import ContactUs from "@/components/contactus/ContactUs";
@@ -17,6 +18,10 @@ const Home = () => {
   return (
     <>
       <Hero />
+
+      <>
+      <BreadCum/>
+      </>
       <Whoarewe />
       <Whatwedo />
       <Studyabroad />

@@ -10,6 +10,8 @@ import { MdKeyboardArrowRight, MdOutlineArrowDropDown } from "react-icons/md";
 import "./navbar.css";
 import { FiAlignRight } from "react-icons/fi";
 import { GiCrossedBones } from "react-icons/gi";
+import { servicesData } from "@/data/services/services.data";
+
 const Navbar = () => {
   const pathname = usePathname();
   const navLinks = [
@@ -20,7 +22,7 @@ const Navbar = () => {
     },
     {
       name: "About Us",
-      link: "/",
+      link: "/about",
     },
     {
       name: "Services",
@@ -150,13 +152,15 @@ const Navbar = () => {
                       className="paragraph-span-small absolute left-[20%] top-20 rounded-xl bg-[#fffffe] text-[12px] text-[#000000]"
                     >
                       <div className="flex flex-col">
-                        {serviceLink.map((service) => (
-                          <p
-                            className="cursor-pointer border-b border-[#e8e8e8] px-[44px] py-[10px]"
-                            key={service}
+                        {servicesData.map((service) => (
+                          <Link
+                            href={`/services/${service.id}`}
+                            key={service.title}
                           >
-                            {service}
-                          </p>
+                            <p className="cursor-pointer border-b border-[#e8e8e8] px-[44px] py-[10px]">
+                              {service.title}
+                            </p>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -244,10 +248,11 @@ const Navbar = () => {
             </>
           ))}
         </ul>
-
-        <button className="whitespace-nowrap rounded-xl bg-gradient-to-b from-[#4453DD] to-[#09117C] px-[22px] py-3 text-background max-lg:hidden">
-          Contact Us
-        </button>
+        <Link href={"/contact"}>
+          <button className="whitespace-nowrap rounded-xl bg-gradient-to-b from-[#4453DD] to-[#09117C] px-[22px] py-3 text-background max-lg:hidden">
+            Contact Us
+          </button>
+        </Link>
         <div className="lg:hidden">
           {smallNav ? (
             <GiCrossedBones
@@ -315,7 +320,7 @@ const Navbar = () => {
                                     <MdOutlineArrowDropDown className="text-[24px]" />
                                   )}
                                 </div>
-                                {serv.sublink  && (
+                                {serv.sublink && (
                                   <>
                                     {smallExtendedNav2 == "Study in Europe" &&
                                       navlink.name == "Study Abroad" && (

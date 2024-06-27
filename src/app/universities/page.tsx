@@ -4,7 +4,7 @@ import UniversityCard from "./UniversityCard";
 const Universities = () => {
   return (
     <main className="container">
-      <section className="grid grid-cols-3 gap-6 my-8">
+      <section className="my-8 grid grid-cols-3 gap-6">
         {universityData.map((uni) => (
           <>
             <UniversityCard
@@ -12,6 +12,7 @@ const Universities = () => {
               flag={uni.flag}
               name={uni.universityName}
               photo={uni.universityPhoto}
+              id={uni.id}
             />
           </>
         ))}

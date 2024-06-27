@@ -1,10 +1,11 @@
-import React from "react";
+interface ServicePageProps {
+  params: {
+    servicename: string;
+  };
+}
 
-const ServicePage = ({ params }: { params: { servicename: string } }) => {
-
-    console.log({params});
-     
-  return <div>ServicePage {params.servicename} s </div>;
+const ServicePage: React.FC<ServicePageProps> = ({ params }) => {
+  return <div>ServicePage {params.servicename}</div>;
 };
 
 export default ServicePage;

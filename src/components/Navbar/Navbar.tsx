@@ -169,7 +169,7 @@ const Navbar = () => {
                     <div
                       onMouseEnter={() => {
                         setExtendedNav("Study Abroad");
-                        console.log(navLink.name);
+                        // console.log(navLink.name);
                       }}
                       onMouseLeave={() => {
                         setExtendedNav("");
@@ -178,44 +178,52 @@ const Navbar = () => {
                     >
                       <div className="flex flex-col">
                         {studyLink.map((Study: any) => (
-                          <p
-                            className="relative flex cursor-pointer items-center gap-2 border-b border-[#e8e8e8] px-[44px] py-[10px]"
-                            key={Study.name}
-                            onMouseEnter={() => {
-                              if (Study.name == "Study in Europe") {
-                                setExtendedNav2(true);
-                              }
-                            }}
-                            onMouseLeave={() => {
-                              setExtendedNav2(false);
-                            }}
-                          >
-                            {Study.name}
 
-                            {Study.sublink && (
-                              <>
-                                <MdKeyboardArrowRight className="text-sm" />
-                                {extendedNav2 && (
-                                  <div className="absolute -right-[95%] top-0 rounded-r-xl bg-[#fffffe]">
-                                    {Study.sublink &&
-                                      Study.sublink.map((stu: any) => (
-                                        <div
-                                          className="border-b border-[#e8e8e8]"
-                                          key={stu}
-                                        >
-                                          <p
-                                            className="px-[44px] py-[10px]"
+                            
+
+                          <Link
+                            key={Study.name}
+                            href={`/studyabroad/${Study.name}`}
+                            className={`hover:bg-primary hover:text-span-white ${Study.sublink ? "pointer-events-none" : ""}`}
+                          >
+                            <p
+                              className={`relative flex cursor-pointer items-center gap-2 border-b border-[#e8e8e8] px-[44px] py-[10px]`}
+                              onMouseEnter={() => {
+                                if (Study.name == "Study in Europe") {
+                                  setExtendedNav2(true);
+                                }
+                              }}
+                              onMouseLeave={() => {
+                                setExtendedNav2(false);
+                              }}
+                            >
+                              {Study.name}
+
+                              {Study.sublink && (
+                                <>
+                                  <MdKeyboardArrowRight className="text-sm" />
+                                  {extendedNav2 && (
+                                    <div className="absolute -right-[95%] top-0 rounded-r-xl bg-[#fffffe]">
+                                      {Study.sublink &&
+                                        Study.sublink.map((stu: any) => (
+                                          <div
+                                            className="border-b border-[#e8e8e8]"
                                             key={stu}
                                           >
-                                            {stu}
-                                          </p>
-                                        </div>
-                                      ))}
-                                  </div>
-                                )}
-                              </>
-                            )}
-                          </p>
+                                            <p
+                                              className="px-[44px] py-[10px]"
+                                              key={stu}
+                                            >
+                                              {stu}
+                                            </p>
+                                          </div>
+                                        ))}
+                                    </div>
+                                  )}
+                                </>
+                              )}
+                            </p>
+                          </Link>
                         ))}
                       </div>
                     </div>

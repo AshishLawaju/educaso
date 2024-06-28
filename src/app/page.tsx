@@ -19,9 +19,7 @@ const Home = () => {
     <>
       <Hero />
 
-      <>
-      <BreadCum/>
-      </>
+  
       <Whoarewe />
       <Whatwedo />
       <Studyabroad />

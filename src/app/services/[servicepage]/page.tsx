@@ -26,7 +26,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ params }) => {
   // console.log({ myservice });
 
   return (
-    <div>
+    <div className="py-8">
       <BreadCum photo={myservice?.breadPhoto} title={myservice?.title} path={pathname} />
       <div className="container flex items-center justify-between py-[116px]">
         <div className="basis-3/5">

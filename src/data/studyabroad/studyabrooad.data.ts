@@ -91,8 +91,10 @@ export const studyabroadData = [
     id: "UnitedKingdom",
     title: "United Kingdom",
     breadcumPhoto: buk,
-    description1: "The United Kingdom has long been renowned for the excellence of its higher education institutions, making it a premier destination for international students. UK universities consistently rank among the world's best, offering rigorous academic programs and cutting-edge research opportunities across a wide range of disciplines. From prestigious Russell Group universities to dynamic, innovative institutions, the UK provides international students with access to a wealth of educational resources and a truly global learning environment. \nBeyond the classroom, the UK's vibrant culture, diverse cities, and welcoming communities create an enriching experience for international students, helping them develop both academically and personally.",
-    description2: "With world-class credentials, a dynamic job market, and an unparalleled student experience, the UK remains a top choice for students seeking a transformative and impactful international education. The most popular programs for international students in the UK include Business (Accounting, Finance, Marketing, Management, International Business), Engineering (Mechanical, Electrical, Civil, Chemical), Computer Science (Software Engineering, Cybersecurity, Data Science, Artificial Intelligence), Social Sciences (Economics, Politics, International Relations, Law), and Humanities (English Literature, History, Philosophy, Creative Writing). \nThe UK's global reputation, specialized programs, and vibrant student life make it an increasingly popular choice for international students seeking a well-rounded and enriching educational journey.",
+    description1:
+      "The United Kingdom has long been renowned for the excellence of its higher education institutions, making it a premier destination for international students. UK universities consistently rank among the world's best, offering rigorous academic programs and cutting-edge research opportunities across a wide range of disciplines. From prestigious Russell Group universities to dynamic, innovative institutions, the UK provides international students with access to a wealth of educational resources and a truly global learning environment. \nBeyond the classroom, the UK's vibrant culture, diverse cities, and welcoming communities create an enriching experience for international students, helping them develop both academically and personally.",
+    description2:
+      "With world-class credentials, a dynamic job market, and an unparalleled student experience, the UK remains a top choice for students seeking a transformative and impactful international education. The most popular programs for international students in the UK include Business (Accounting, Finance, Marketing, Management, International Business), Engineering (Mechanical, Electrical, Civil, Chemical), Computer Science (Software Engineering, Cybersecurity, Data Science, Artificial Intelligence), Social Sciences (Economics, Politics, International Relations, Law), and Humanities (English Literature, History, Philosophy, Creative Writing). \nThe UK's global reputation, specialized programs, and vibrant student life make it an increasingly popular choice for international students seeking a well-rounded and enriching educational journey.",
 
     educasoImage: euk,
     educationImage: fuk,
@@ -104,13 +106,10 @@ export const studyabroadData = [
       "Humanities (English Literature, History, Philosophy, Creative Writing)",
       "Life Sciences (Biomedical Sciences, Neuroscience, Pharmacology)",
       "Art and Design (Fine Art, Fashion, Graphic Design, Architecture)",
-      "Performing Arts (Drama, Music, Dance)"
-    ]
-    ,
-    educationDialog: 
-    "Studying in UK not only offers top-tier education but also provides a multicultural experience, diverse opportunities, and a high quality of life, making it an attractive destination for students worldwide.",
-    
-    
+      "Performing Arts (Drama, Music, Dance)",
+    ],
+    educationDialog:
+      "Studying in UK not only offers top-tier education but also provides a multicultural experience, diverse opportunities, and a high quality of life, making it an attractive destination for students worldwide.",
   },
 
   {
@@ -203,6 +202,28 @@ export const studyabroadData = [
       "Studying in Denmark not only offers top-tier education but also provides a multicultural experience, diverse opportunities, and a high quality of life, making it an attractive destination for students worldwide.",
   },
   {
+    id: "Sweden",
+    title: "Sweden",
+    breadcumPhoto: bsweden,
+    description1:
+      "Sweden, a Nordic nation renowned for its technological innovation and progressive social values, offers an exceptional educational experience for international students.\n Swedish universities are globally recognized for their academic excellence, cutting-edge research, and commitment to sustainability, equipping students with the knowledge and skills to thrive in the digital economy. Popular programs include engineering, computer science, business, environmental sciences, and social sciences, providing a strong foundation for success in the global job market.",
+    description2:
+      "Beyond the classroom, Sweden's vibrant startup ecosystem, work-life balance, and stunning natural landscapes create an enriching environment for personal and professional growth. \n For those aspiring to become part of the next generation of tech leaders and global citizens, Sweden provides an unparalleled educational journey that seamlessly blends academic rigor with real-world relevance. The country's emphasis on public health, urban planning, renewable energy, sustainable development, and Scandinavian studies also makes it an attractive destination for students seeking to make a positive impact on the world.",
+
+    educasoImage: egroup2,
+    educationImage: fgermany,
+    educationList: [
+      "Engineering (Electrical, Mechanical, Civil, Computer, Chemical)",
+      "Computer Science (Software Engineering, Cybersecurity, Data Science, AI)",
+      "Business (Accounting, Finance, Marketing, Management, International Business)",
+      "Environmental Sciences (Environmental Engineering, Environmental Studies, Sustainability)",
+      "Social Sciences (Psychology, Sociology, Political Science, Economics)",
+      "Public Policy and Administration (Public Administration, International Relations)",
+    ],
+    educationDialog:
+      "Studying in Sweden not only offers top-tier education but also provides a multicultural experience, diverse opportunities, and a high quality of life, making it an attractive destination for students worldwide.",
+  },
+  {
     id: "Poland",
     title: "Poland",
     breadcumPhoto: bpoland,
@@ -270,7 +291,7 @@ export const studyabroadData = [
   },
   {
     id: "Japan",
-title: "Japan",
+    title: "Japan",
     breadcumPhoto: bjapan,
     description1:
       "Japan, a land of ancient temples, cutting-edge technology, and a rich pop culture scene, is also a rising star in international education.  Universities in Japan are actively working to attract international students, with many offering scholarships and financial aid programs to help offset costs. \n Tuition fees at public universities are typically lower compared to other developed nations.  Japan's strong focus on innovation and technological advancement is reflected in its popular programs for international students. Engineering, Computer Science, and Business are some of the most sought-after fields, with many universities offering them entirely in English.  The opportunity to live and learn in a country known for its efficiency, safety, and unique cultural experiences adds another layer of appeal. ",

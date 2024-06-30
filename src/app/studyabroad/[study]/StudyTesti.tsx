@@ -1,19 +1,14 @@
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 
-const StudyTesti = () => {
+const StudyTesti = ({ testi }: { testi: string }) => {
   return (
-    <div className="text-background bg-primary px-[55px] py-[41px] rounded-3xl ">
-   
-   <p className="relative">
+    <div className="rounded-3xl bg-primary px-[55px] py-[41px] text-background ">
+      <p className="relative">
+        {testi}
 
-      Studying in Australia not only offers top-tier education but also provides
-      a multicultural experience, diverse opportunities, and a high quality of
-      life, making it an attractive destination for students worldwide.
-      <BiSolidQuoteAltLeft  className="absolute -top-6 -left-4 text-[24px]" />
-      <BiSolidQuoteAltRight className="absolute -bottom-3 right-3 text-[24px]" />
-   </p>
-
-
+        <BiSolidQuoteAltLeft className="absolute -left-4 -top-6 text-[24px]" />
+        <BiSolidQuoteAltRight className="absolute -bottom-3 right-1 text-[24px]" />
+      </p>
     </div>
   );
 };

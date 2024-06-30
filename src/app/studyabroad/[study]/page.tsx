@@ -10,6 +10,7 @@ import chatImage from "./assets/chat.webp";
 import Capital from "@/components/Capital/Capital";
 import { IoIosCheckmark, IoMdCheckmark } from "react-icons/io";
 import StudyTesti from "./StudyTesti";
+import { usePathname } from "next/navigation";
 type studyAboradPageType = {
   params: { study: string };
 };
@@ -32,36 +33,38 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
     (study) => study.id == params.study,
   );
 
+  const pathname = usePathname();
+
   return (
-    <section className="container py-8">
+    <section className="py-8">
       <BreadCum
         photo={currentStudy?.breadcumPhoto}
         title={currentStudy?.title}
-        path={currentStudy?.title}
+        path={pathname}
       />
 
-      <div className="flex">
+      <div className="container flex items-center gap-x-[116px] py-[100px]">
         <div className="basis-3/5">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum,
-          voluptatum assumenda cum, excepturi voluptatem possimus ex praesentium
-          veritatis, in aspernatur vero! Maiores quidem obcaecati ipsum adipisci
-          esse, sed accusamus aliquid? Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit. Dolorum, voluptatum assumenda cum, excepturi
-          voluptatem possimus ex praesentium veritatis, in aspernatur vero!
-          Maiores quidem obcaecati ipsum adipisci esse, sed accusamus aliquid?
+          {currentStudy?.description1.split("\n").map((para) => (
+            <p key={para} className="mt-3">
+              {para}
+            </p>
+          ))}
         </div>
-        <div className="basis-2/5">
-          <Image
-            className="h-full w-full"
-            src={`${currentStudy!.educasoImage.src}`}
-            alt={`${currentStudy?.title}`}
-            width={434}
-            height={472}
-          ></Image>
+        <div className="container basis-2/5">
+          <div className="h-[472] w-[434]">
+            <Image
+              className="h-full w-full"
+              src={`${currentStudy!.educasoImage.src}`}
+              alt={`${currentStudy?.title}`}
+              width={434}
+              height={472}
+            ></Image>
+          </div>
         </div>
       </div>
 
-      <div className="flex">
+      <div className="container flex gap-[135px] ">
         <div className="h-[329px] w-[489px] flex-1">
           <Image
             src={studyhere}
@@ -70,29 +73,33 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
           ></Image>
         </div>
         <div className="flex-1">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-          eos quos cumque nisi a, illo repudiandae harum ex facilis dicta totam
-          officia quaerat tempora porro distinctio adipisci, quisquam aut
-          accusantium? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Voluptatum eos quos cumque nisi a, illo repudiandae harum ex facilis
-          dicta totam officia quaerat tempora porro distinctio adipisci,
-          quisquam aut accusantium?
+          {currentStudy?.description2.split("\n").map((para) => (
+            <p key={para} className="mt-3">
+              {para}
+            </p>
+          ))}
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-4 sm:justify-between">
-        {chatText.map((chat) => (
-          <div
-            key={chat}
-            style={{ backgroundImage: `url(${chatImage.src})` }}
-            className="flex h-[150px] w-[263px] items-center justify-center"
-          >
-            <p className="w-[50%] text-center text-primary">{chat}</p>
-          </div>
-        ))}
+      <div className="flex flex-wrap justify-center gap-4 bg-[#f7f7ff] sm:justify-between py-20 my-20 ">
+        <h3 className="small-sub-heading w-full text-center">
+          Studying in {currentStudy?.title} offers several compelling reasons
+          for international students:
+        </h3>
+        <div className="container flex flex-wrap justify-center gap-4 sm:justify-between">
+          {chatText.map((chat) => (
+            <div
+              key={chat}
+              style={{ backgroundImage: `url(${chatImage.src})` }}
+              className="flex h-[150px] w-[263px] items-center justify-center"
+            >
+              <p className="w-[50%] text-center text-primary">{chat}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between container gap-[110px]">
         <div className="w-[50%]">
           <h3 className="small-sub-heading">
             <span className="leading-5">
@@ -124,7 +131,7 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
             ></Image>
           </div>
           <div className="absolute -bottom-5">
-            <StudyTesti />
+            <StudyTesti testi={currentStudy!.educationDialog} />
           </div>
         </div>
       </div>

@@ -56,34 +56,39 @@ const Navbar = () => {
   ];
 
   const studyLink = [
-    { name: "Study in US" },
+    { name: "Study in US", id: "UnitedStates" },
     {
       name: "Study in UK",
+      id: "UnitedKingdom",
     },
     {
       name: "Study in Europe",
       sublink: [
-        "Study in Denmark",
-        "Study in Netherland",
-        "Study in German",
-        "Study in Poland",
-        "Study in Malta",
-        "Study in Ireland",
-        "Study in France",
-        "Study in Sweden",
+        { name: "Study in Denmark", id: "Denmark" },
+        { name: "Study in Netherland", id: "Netherlands " },
+        { name: "Study in Germany", id: "Germany" },
+        { name: "Study in Poland", id: "Poland" },
+        { name: "Study in Malta", id: "Malta" },
+        { name: "Study in Ireland", id: "Ireland" },
+        { name: "Study in France", id: "France" },
+        { name: "Study in Sweden", id: "Sweden" },
       ],
     },
     {
       name: "Study in Canada",
+      id: "Canada",
     },
     {
       name: "Study in South Korea",
+      id:"SouthKorea"
     },
     {
       name: "Study in Japan",
+      id:"Japan"
     },
     {
       name: "Study in Australia",
+      id: "Australia",
     },
   ];
 
@@ -201,7 +206,7 @@ const Navbar = () => {
                                         {Study.sublink.map((stu: any) => (
                                           <Link
                                             key={stu}
-                                            href={`/studyabroad/${stu}`}
+                                            href={`/studyabroad/${stu.id}`}
                                             className="hover:bg-primary hover:text-span-white"
                                           >
                                             <div className="border-b border-[#e8e8e8]">
@@ -209,7 +214,7 @@ const Navbar = () => {
                                                 className="px-[44px] py-[10px]"
                                                 key={stu}
                                               >
-                                                {stu}
+                                                {stu.name}
                                               </p>
                                             </div>
                                           </Link>
@@ -223,7 +228,7 @@ const Navbar = () => {
                           ) : (
                             <Link
                               key={Study.name}
-                              href={`/studyabroad/${Study.name}`}
+                              href={`/studyabroad/${Study.id}`}
                               className="hover:bg-primary hover:text-span-white"
                             >
                               <p

@@ -1,7 +1,13 @@
 import Image from "next/image";
 import testPhoto from "../assets/testoverview.webp";
 import Capital from "@/components/Capital/Capital";
-const TestOverview = () => {
+const TestOverview = ({
+  overviewContent,
+  title,
+}: {
+  title: string;
+  overviewContent: string;
+}) => {
   return (
     <section className="flex gap-[165px]">
       <div className="flex-1">
@@ -9,21 +15,14 @@ const TestOverview = () => {
           <span className="leading-5">
             <Capital character="I" />
           </span>
-          ELTS Overview
+          {title} Overview
         </h3>
-        <div className="mt-6"></div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-          ipsam quod atque quibusdam minus pariatur, nobis autem saepe deserunt
-          sunt corrupti vitae fugiat cumque reprehenderit sequi fugit facilis et
-          quo!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-          ipsam quod atque quibusdam minus pariatur, nobis autem saepe deserunt
-          sunt corrupti vitae fugiat cumque reprehenderit sequi fugit facilis et
-          quo!
-        </p>
+        <div className="mt-6">{overviewContent.split("\n").map(para=>
+
+          (
+            <p key={para} className="mt-6">{para}</p>
+          )
+        )}</div>
       </div>
       <div className="h-[255px] w-[348px]">
         <Image

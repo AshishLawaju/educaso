@@ -80,11 +80,11 @@ const Navbar = () => {
     },
     {
       name: "Study in South Korea",
-      id:"SouthKorea"
+      id: "SouthKorea",
     },
     {
       name: "Study in Japan",
-      id:"Japan"
+      id: "Japan",
     },
     {
       name: "Study in Australia",
@@ -92,7 +92,13 @@ const Navbar = () => {
     },
   ];
 
-  const testLink = ["IELTS", "PTE", "Duolingo", "Korean", "Japanese"];
+  const testLink = [
+    { id: "IELTS", title: "IELTS" },
+    { id: "PTE", title: "PTE" },
+    { id: "Duolingo", title: "Duolingo" },
+    { id: "TOPIK", title: "Korean" },
+    { id: "JLPT", title: "Japanese" },
+  ];
   const [extendedNav, setExtendedNav] = useState("");
   const [extendedNav2, setExtendedNav2] = useState(false);
   const [smallNav, setSmallNav] = useState(false);
@@ -286,12 +292,14 @@ const Navbar = () => {
                     >
                       <div className="flex flex-col">
                         {testLink.map((service) => (
-                          <p
-                            className="cursor-pointer border-b border-[#e8e8e8] px-[44px] py-[10px]"
-                            key={service}
+                          <Link
+                            key={service.id}
+                            href={`/testpreparation/${service.id}`}
                           >
-                            {service}
-                          </p>
+                            <p className="cursor-pointer border-b border-[#e8e8e8] px-[44px] py-[10px]">
+                              {service.title}
+                            </p>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -379,8 +387,8 @@ const Navbar = () => {
                                       navlink.name == "Study Abroad" && (
                                         <>
                                           {serv.sublink.map((ser) => (
-                                            <p key={ser} className="ml-4">
-                                              {ser}
+                                            <p key={`${ser}`} className="ml-4">
+                                              {ser.name}
                                             </p>
                                           ))}
                                         </>

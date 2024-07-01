@@ -11,13 +11,13 @@ const Button = ({ buttonTittle, textColors, backgroundColors }: buttonType) => {
   return (
     <button
       type="button"
-      className={`flex items-center gap-[6px] rounded-md bg-primary px-[18px] py-3 text-background `}
+      className={`flex items-center max-sm:text-sm gap-[6px] rounded-md bg-primary px-[18px] py-3 text-background `}
       style={{ 
         backgroundColor: `#${backgroundColors}`, 
         color: `${textColors}`
       }}
     >
-      {buttonTittle} <FaArrowRight />
+      {buttonTittle} <FaArrowRight className="max-sm:text-sm"/>
     </button>
   );
 };

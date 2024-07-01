@@ -14,11 +14,11 @@
   }
 
   .main-heading{
-    @apply font-bold text-[48px] text-[#141414] font-raleway
+    @apply  text-[24px]    sm:text-[32px] font-bold lg:text-[48px] text-[#141414] font-raleway 
   }
 
   .sub-heading{
-    @apply font-semibold text-[28px]  text-[#2b2b2b]
+    @apply font-semibold text-[18px] sm:text-[24px] lg:text-[28px]  text-[#2b2b2b]
   }
 
   .small-sub-heading {

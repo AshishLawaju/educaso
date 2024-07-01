@@ -36,17 +36,17 @@ const Whatwedo = () => {
     },
   ];
   return (
-    <section className="bg-[#f7f7ff] py-[116px]">
-      <div className="container flex">
-        <div className="flex flex-1 flex-wrap gap-3">
+    <section className="bg-[#f7f7ff] my-8 sm:py-14 lg:py-[116px]">
+      <div className="container flex max-lg:flex-col-reverse max-lg:gap-8">
+        <div className="grid flex-1 grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 place-content-center place-items-center">
           {whatwedoData.map((whatwedo) => (
-            <div key={whatwedo.title}>
+            <div key={whatwedo.title} className="w-full">
               <Whatwedocard title={whatwedo.title} image={whatwedo.image} />
             </div>
           ))}
         </div>
-        <div className="flex flex-1 items-center justify-center text-start">
-          <div className="w-[70%]">
+        <div className="flex  max-sm:mt-8 flex-1 items-center text-start lg:justify-center">
+          <div className="lg:w-[70%]">
             <h3 className="small-sub-heading text-primary">
               <span className="leading-4">
                 <Capital character="W" />
@@ -56,7 +56,7 @@ const Whatwedo = () => {
             <h2 className="sub-heading mt-3 text-primary">
               We make your study abroad dreams a simpler reality
             </h2>
-            <Readmore/>
+            <Readmore />
           </div>
         </div>
       </div>

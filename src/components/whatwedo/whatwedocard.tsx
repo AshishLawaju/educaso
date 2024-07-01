@@ -9,7 +9,7 @@ type whatwedocardType = {
 const Whatwedocard = ({ image, title }: whatwedocardType) => {
   return (
     <div
-      className="relative flex h-[180px] w-[180px] items-end rounded-xl bg-cover bg-center p-5 text-[15px] font-semibold uppercase text-background"
+      className="lg:w-[180px] w-full  relative flex h-[180px] items-end rounded-xl bg-cover bg-center p-5 text-[15px] font-semibold uppercase text-background"
       style={{ backgroundImage: `url(${image.src})` }}
     >
       <p className="relative z-10 w-[50%]">{title}</p>

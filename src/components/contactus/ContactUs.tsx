@@ -43,8 +43,8 @@ const ContactUs = () => {
   const fieldClass =
     "w-full lg:min-w-[270px] h-[44px] rounded-lg outline-none py-3 px-2 border border-[#a5a5a5] lg:mt-2 ";
   return (
-    <section className="py-[56px]">
-      <div className="container flex justify-between">
+    <section className=" xl:py-[56px] max-xl:py-10">
+      <div className="container flex max-xl:flex-col-reverse max-xl:gap-y-10 justify-between">
         <div>
           <h3 className="small-sub-heading text-primary">
             Contact us for more Information
@@ -88,14 +88,15 @@ const ContactUs = () => {
               <Image src={youtube} alt="youtube"></Image>
             </div>
 
-            <div className="mt-[18px] h-[211px] w-[440px] overflow-hidden rounded-xl">
+            <div className="mt-[18px] h-[211px] w-full xl:w-[440px] overflow-hidden rounded-xl">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d312.2175080176686!2d85.32314813998751!3d27.70685242422554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1907e99e0391%3A0xcce47de157f588d3!2sStar%20Mall!5e0!3m2!1sen!2snp!4v1719302907512!5m2!1sen!2snp"
-                width="450"
+                // width="450"
                 height="220"
                 style={{ border: 0 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                className="w-full xl:w-[440px]"
               ></iframe>
             </div>
           </div>

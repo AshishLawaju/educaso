@@ -1,5 +1,4 @@
 import Link from "next/link";
-import carrer from "./carrercouncelling.webp";
 import { StaticImageData } from "next/image";
 
 type breadcumType = {
@@ -13,7 +12,7 @@ const BreadCum = ({ photo, title, path }: breadcumType) => {
 
   return (
     <section
-      className="container relative flex h-[300px] flex-col justify-center overflow-hidden rounded-3xl bg-cover bg-center pl-[50px]"
+      className="container relative flex h-[150px]  sm:h-[300px] flex-col justify-center overflow-hidden rounded-3xl bg-cover bg-center sm:pl-[50px] pl-5"
       style={{
         backgroundImage: `url(${photo?.src})`,
       }}

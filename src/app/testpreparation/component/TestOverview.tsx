@@ -26,7 +26,7 @@ const TestOverview = ({
           ))}
         </div>
       </div>
-      <div className="h-[255px] w-[348px]">
+      <div className="h-[255px] w-[348px] max-lg:hidden">
         <Image
           alt="test preparation"
           className="h-full w-full"

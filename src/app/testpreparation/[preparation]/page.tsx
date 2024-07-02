@@ -41,31 +41,39 @@ const TestPrepartion = ({ params }: testPreparationType) => {
         title={`${currentTest?.id}`}
       />
       {/* test format */}
-      <div className="container py-[144px]">
-        <h3 className="small-sub-heading text-center text-primary ">
+      <div className="container py-[144px] overflow-x-scroll ">
+        <h3 className="small-sub-heading text-center text-primary">
           {currentTest?.id} Test Format in Detail:
         </h3>
 
-        <table className="border-collapse border rounded-xl w-full bg-[#f7f7ff] mt-6">
+        <table className="mt-6 w-full border-collapse rounded-xl border bg-[#f7f7ff] ">
           <>
             <thead className="border">
-                <tr className="border bg-primary text-span-white ">
-                  {currentTest?.testFormat &&
-                    currentTest?.testFormat[0].map((hed) => (
-                      <th key={hed[0]} className="border py-4 px-6">{hed}</th>
-                    ))}
-                </tr>
-              </thead> 
+              <tr className="border bg-primary text-span-white">
+                {currentTest?.testFormat &&
+                  currentTest?.testFormat[0].map((hed) => (
+                    <th key={hed[0]} className="border px-6 py-4">
+                      {hed}
+                    </th>
+                  ))}
+              </tr>
+            </thead>
 
-            <tbody className="border rounded-xl">
+            <tbody className="rounded-xl border">
               {currentTest?.testFormat &&
                 currentTest?.testFormat.map((data: any, ind) => (
-                  <tr key={ind} className="border ">
+                  <tr key={ind} className="border">
                     {data.map((tabledata: any) => (
-                      <td key={tabledata} className="border py-4 px-6">
+                      <td key={tabledata} className="border px-6 py-4">
                         {Array.isArray(tabledata)
-                          ? tabledata.map((t) => <p key={t} className=" flex mt-3  gap-1"><div className="mt-1"><MdOutlineTask  className="text-primary"/></div>
- {t}</p>)
+                          ? tabledata.map((t) => (
+                              <p key={t} className="mt-3 flex gap-1">
+                                <span className="mt-1">
+                                  <MdOutlineTask className="text-primary" />
+                                </span>
+                                {t}
+                              </p>
+                            ))
                           : tabledata}
                       </td>
                     ))}
@@ -87,19 +95,19 @@ const TestPrepartion = ({ params }: testPreparationType) => {
                 key={faq.ques}
                 className={`${index % 2 == 0 ? "" : "flex w-full justify-end"} `}
               >
-                <div className="relative w-[50%]">
+                <div className="relative lg:w-[50%]">
                   {index % 2 == 0 ? (
                     <div className="absolute -top-[124px] right-0 h-[122px] w-[201px]">
                       {index !== 0 && (
                         <Image
                           alt="follow educaso"
                           src={rlarrow}
-                          className="h-full w-full"
+                          className="h-full w-full "
                         ></Image>
                       )}
                     </div>
                   ) : (
-                    <div className="absolute -top-[124px] h-[122px] w-[201px]">
+                    <div className="absolute lg:-top-[124px] h-[122px] w-[201px]">
                       <Image
                         alt="follow educaso"
                         src={lrarrow}
@@ -130,13 +138,13 @@ const TestPrepartion = ({ params }: testPreparationType) => {
               currentTest?.register.map((reg) => <li key={reg}>{reg}</li>)}
           </ul>
         </div>
-        <div className="flex flex-1 justify-end">
+        <div className="hidden lg:flex flex-1 justify-end ">
           <Image alt="register" src={register}></Image>
         </div>
       </section>
 
-      <Pathway/>
-      <FAQ/>
+      <Pathway />
+      <FAQ />
     </main>
   );
 };

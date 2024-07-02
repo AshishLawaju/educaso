@@ -42,7 +42,7 @@ const FAQ = () => {
         requently Asked Questions
       </h3>
       <div className="mt-6 flex gap-[116px] items-center">
-        <div className="h-[460px] w-[744px]">
+        <div className="h-[460px] w-[744px] hidden lg:block">
           <Image alt="FAQ" src={faqImage} className="w-full h-full "></Image>
         </div>
         <Accordian accData={faqData} />

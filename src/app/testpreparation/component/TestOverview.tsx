@@ -10,7 +10,7 @@ const TestOverview = ({
   overviewContent: string;
 }) => {
   return (
-    <section className="container mt-[56px] flex gap-[165px]">
+    <section className="container mt-8 sm:mt-[56px] flex gap-[165px]">
       <div className="flex-1">
         <h3 className="small-sub-heading">
           <span className="leading-5">

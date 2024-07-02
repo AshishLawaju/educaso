@@ -12,7 +12,7 @@ const BreadCum = ({ photo, title, path }: breadcumType) => {
 
   return (
     <section
-      className="container relative flex h-[150px]  sm:h-[300px] flex-col justify-center overflow-hidden rounded-3xl bg-cover bg-center sm:pl-[50px] pl-5"
+      className="container relative flex h-[150px] flex-col justify-center overflow-hidden rounded-3xl bg-cover bg-center pl-5 sm:h-[300px] sm:pl-[50px]"
       style={{
         backgroundImage: `url(${photo?.src})`,
       }}

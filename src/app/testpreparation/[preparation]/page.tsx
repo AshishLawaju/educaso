@@ -29,65 +29,67 @@ const TestPrepartion = ({ params }: testPreparationType) => {
 
   return (
     <main className="py-8">
-      <BreadCum
-        photo={testBanner}
-        title={currentTest?.id}
-        key={currentTest?.id}
-        path={` / Test Preparation / ${currentTest?.id}`}
-      />
+      <div className="max-sm:px-3">
+        <BreadCum
+          photo={testBanner}
+          title={currentTest?.id}
+          key={currentTest?.id}
+          path={` / Test Preparation / ${currentTest?.id}`}
+        />
+      </div>
 
       <TestOverview
         overviewContent={`${currentTest?.overview}`}
         title={`${currentTest?.id}`}
       />
       {/* test format */}
-      <div className="container py-[144px] overflow-x-scroll ">
+      <div className="container py-10 sm:py-[80px] lg:py-[144px]">
         <h3 className="small-sub-heading text-center text-primary">
           {currentTest?.id} Test Format in Detail:
         </h3>
-
-        <table className="mt-6 w-full border-collapse rounded-xl border bg-[#f7f7ff] ">
-          <>
-            <thead className="border">
-              <tr className="border bg-primary text-span-white">
-                {currentTest?.testFormat &&
-                  currentTest?.testFormat[0].map((hed) => (
-                    <th key={hed[0]} className="border px-6 py-4">
-                      {hed}
-                    </th>
-                  ))}
-              </tr>
-            </thead>
-
-            <tbody className="rounded-xl border">
-              {currentTest?.testFormat &&
-                currentTest?.testFormat.map((data: any, ind) => (
-                  <tr key={ind} className="border">
-                    {data.map((tabledata: any) => (
-                      <td key={tabledata} className="border px-6 py-4">
-                        {Array.isArray(tabledata)
-                          ? tabledata.map((t) => (
-                              <p key={t} className="mt-3 flex gap-1">
-                                <span className="mt-1">
-                                  <MdOutlineTask className="text-primary" />
-                                </span>
-                                {t}
-                              </p>
-                            ))
-                          : tabledata}
-                      </td>
+        <div className="max-md:overflow-x-scroll">
+          <table className="mt-6 w-full border-collapse rounded-xl border bg-[#f7f7ff]">
+            <>
+              <thead className="border">
+                <tr className="border bg-primary text-span-white">
+                  {currentTest?.testFormat &&
+                    currentTest?.testFormat[0].map((hed) => (
+                      <th key={hed[0]} className="border px-6 py-4">
+                        {hed}
+                      </th>
                     ))}
-                  </tr>
-                ))}
-            </tbody>
-          </>
-        </table>
-      </div>
+                </tr>
+              </thead>
 
+              <tbody className="rounded-xl border">
+                {currentTest?.testFormat &&
+                  currentTest?.testFormat.map((data: any, ind) => (
+                    <tr key={ind} className="border">
+                      {data.map((tabledata: any) => (
+                        <td key={tabledata} className="border px-6 py-4">
+                          {Array.isArray(tabledata)
+                            ? tabledata.map((t) => (
+                                <p key={t} className="mt-3 flex gap-1">
+                                  <span className="mt-1">
+                                    <MdOutlineTask className="text-primary" />
+                                  </span>
+                                  {t}
+                                </p>
+                              ))
+                            : tabledata}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+              </tbody>
+            </>
+          </table>
+        </div>
+      </div>
       {/*  test FAQ
        */}
 
-      <div className="bg-[#f4f4fc] py-20">
+      <div className="bg-[#f4f4fc] py-10 sm:py-14 lg:py-20">
         <div className="container flex flex-col">
           {currentTest!.faq &&
             currentTest?.faq.map((faq, index) => (
@@ -102,12 +104,12 @@ const TestPrepartion = ({ params }: testPreparationType) => {
                         <Image
                           alt="follow educaso"
                           src={rlarrow}
-                          className="h-full w-full "
+                          className="h-full w-full"
                         ></Image>
                       )}
                     </div>
                   ) : (
-                    <div className="absolute lg:-top-[124px] h-[122px] w-[201px]">
+                    <div className="absolute h-[122px] w-[201px] lg:-top-[124px]">
                       <Image
                         alt="follow educaso"
                         src={lrarrow}
@@ -115,7 +117,9 @@ const TestPrepartion = ({ params }: testPreparationType) => {
                       ></Image>
                     </div>
                   )}
-                  <TestFAQ faq={faq} />
+                  <div className={`${index == 0 ? "" : "max-lg:mt-[123px]"}`}>
+                    <TestFAQ faq={faq} />
+                  </div>
                 </div>
               </div>
             ))}
@@ -124,7 +128,7 @@ const TestPrepartion = ({ params }: testPreparationType) => {
 
       {/* register */}
 
-      <section className="container flex justify-between py-[144px]">
+      <section className="container flex justify-between py-10 sm:py-20 lg:py-[144px]">
         <div className="flex-1">
           <h3 className="small-sub-heading text-primary">
             How to register {currentTest?.id}?
@@ -138,7 +142,7 @@ const TestPrepartion = ({ params }: testPreparationType) => {
               currentTest?.register.map((reg) => <li key={reg}>{reg}</li>)}
           </ul>
         </div>
-        <div className="hidden lg:flex flex-1 justify-end ">
+        <div className="hidden flex-1 justify-end lg:flex">
           <Image alt="register" src={register}></Image>
         </div>
       </section>

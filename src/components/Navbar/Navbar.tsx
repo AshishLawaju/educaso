@@ -106,14 +106,14 @@ const Navbar = () => {
   const [smallExtendedNav2, setSmallExtendedNav2] = useState("");
   return (
     <nav className="sticky top-0 z-50 bg-[#fffffe] shadow-sm">
-      <div className="py-[27px]; container relative flex items-center justify-between">
+      <div className="py-3 sm:py-4 container relative flex items-center justify-between">
         <div className="h-[36px] w-[132px] cursor-pointer">
           <Link href={"/"}>
             <Image src={logo} alt="educaso" className="h-full w-full"></Image>
           </Link>
         </div>
 
-        <ul className="relative flex items-center gap-x-8 whitespace-nowrap text-[16px] text-span-black max-lg:hidden">
+        <ul className="relative flex items-center gap-x-8 whitespace-nowrap text-[16px] text-span-black max-xl:hidden">
           {/*  <li className="cursor-pointer">Home</li>
           <li className="cursor-pointer">About Us</li>
           <li className="cursor-pointer flex gap-2 items-center">
@@ -310,11 +310,13 @@ const Navbar = () => {
           ))}
         </ul>
         <Link href={"/contact"}>
-          <button className="whitespace-nowrap rounded-xl bg-gradient-to-b from-[#4453DD] to-[#09117C] px-[22px] py-3 text-background max-lg:hidden">
+          <button className="whitespace-nowrap rounded-xl bg-gradient-to-b from-[#4453DD] to-[#09117C] px-[22px] py-3 text-background max-xl:hidden">
             Contact Us
           </button>
         </Link>
-        <div className="lg:hidden">
+
+        {/* small navbar start here @ */}
+        <div className="xl:hidden">
           {smallNav ? (
             <GiCrossedBones
               className="cursor-pointer text-[19px] text-primary"
@@ -328,7 +330,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <div className="lg:hidden">
+      <div className="xl:hidden">
         {true && (
           <div
             className={`absolute left-0 top-9 flex w-full flex-col justify-center bg-[#fffffe] p-4 ${smallNav ? "translate-x-0 opacity-100 transition-all duration-300 ease-in-out" : "translate-x-[999px] overflow-hidden opacity-0 transition-all duration-300 ease-in-out"} -z-10`}

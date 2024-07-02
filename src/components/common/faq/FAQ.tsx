@@ -34,7 +34,7 @@ const FAQ = () => {
     },
   ];
   return (
-    <section>
+    <section className="container py-[116px]">
       <h3 className="small-sub-heading text-center">
         <span className="leading-5">
           <Capital character="F" />

@@ -29,21 +29,21 @@ const TestPrepartion = ({ params }: testPreparationType) => {
 
   return (
     <main className="py-8">
-      <div className="max-sm:px-3">
+    {  <div className="max-sm:px-3">
         <BreadCum
           photo={testBanner}
           title={currentTest?.id}
           key={currentTest?.id}
           path={` / Test Preparation / ${currentTest?.id}`}
         />
-      </div>
+      </div>}
 
-      <TestOverview
+    {  <TestOverview
         overviewContent={`${currentTest?.overview}`}
         title={`${currentTest?.id}`}
-      />
+      />}
       {/* test format */}
-      <div className="container py-10 sm:py-[80px] lg:py-[144px]">
+    {  <div className="container py-10 sm:py-[80px] lg:py-[144px]">
         <h3 className="small-sub-heading text-center text-primary">
           {currentTest?.id} Test Format in Detail:
         </h3>
@@ -85,11 +85,11 @@ const TestPrepartion = ({ params }: testPreparationType) => {
             </>
           </table>
         </div>
-      </div>
+      </div>}
       {/*  test FAQ
        */}
 
-      <div className="bg-[#f4f4fc] py-10 sm:py-14 lg:py-20">
+      <div className="bg-[#f4f4fc] py-10 sm:py-14 lg:py-20 overflow-hidden">
         <div className="container flex flex-col">
           {currentTest!.faq &&
             currentTest?.faq.map((faq, index) => (
@@ -97,9 +97,9 @@ const TestPrepartion = ({ params }: testPreparationType) => {
                 key={faq.ques}
                 className={`${index % 2 == 0 ? "" : "flex w-full justify-end"} `}
               >
-                <div className="relative lg:w-[50%]">
+                <div className="relative w-full  lg:w-[50%]">
                   {index % 2 == 0 ? (
-                    <div className="absolute -top-[124px] right-0 h-[122px] w-[201px]">
+                    <div className="absolute  -top-[124px] max-lg:left-[20%] lg:right-0 h-[122px] w-[201px]">
                       {index !== 0 && (
                         <Image
                           alt="follow educaso"
@@ -109,7 +109,7 @@ const TestPrepartion = ({ params }: testPreparationType) => {
                       )}
                     </div>
                   ) : (
-                    <div className="absolute h-[122px] w-[201px] lg:-top-[124px]">
+                    <div className="absolute h-[122px] w-[201px] max-md:left-[20%] lg:-top-[124px]">
                       <Image
                         alt="follow educaso"
                         src={lrarrow}
@@ -128,7 +128,7 @@ const TestPrepartion = ({ params }: testPreparationType) => {
 
       {/* register */}
 
-      <section className="container flex justify-between py-10 sm:py-20 lg:py-[144px]">
+      {<section className="container flex justify-between py-10 sm:py-20 lg:py-[144px]">
         <div className="flex-1">
           <h3 className="small-sub-heading text-primary">
             How to register {currentTest?.id}?
@@ -145,7 +145,7 @@ const TestPrepartion = ({ params }: testPreparationType) => {
         <div className="hidden flex-1 justify-end lg:flex">
           <Image alt="register" src={register}></Image>
         </div>
-      </section>
+      </section>}
 
       <Pathway />
       <FAQ />

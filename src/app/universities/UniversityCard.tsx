@@ -7,9 +7,9 @@ export type universitiesCardType = {
   photo: StaticImageData;
   name: String;
   flag: StaticImageData;
-  id:String
+  id: String;
 };
-const UniversityCard = ({ photo, name, flag,id }: universitiesCardType) => {
+const UniversityCard = ({ photo, name, flag, id }: universitiesCardType) => {
   const router = useRouter();
 
   return (
@@ -18,11 +18,13 @@ const UniversityCard = ({ photo, name, flag,id }: universitiesCardType) => {
       onClick={() => router.push(`/universities/${id}`)}
     >
       <div className="h-[250px] w-[389px]">
-        <Image src={photo} alt={`${name}`} className="h-full w-full"></Image>
+        <Image
+          src={photo}
+          alt={`${name}`}
+          className="h-full w-full object-cover"
+        ></Image>
       </div>
-      <h3 className="w-[70%] px-8 py-12 font-semibold text-primary">
-        {name}ss
-      </h3>
+      <h3 className="w-[70%] px-8 py-12 font-semibold text-primary">{name}</h3>
       <div className="absolute right-4 top-[55%] z-10 h-[80px] w-[80px] overflow-hidden rounded-full">
         <Image alt={`${name}`} src={flag}></Image>
       </div>

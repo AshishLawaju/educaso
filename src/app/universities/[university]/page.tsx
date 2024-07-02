@@ -23,11 +23,11 @@ const SinglePageUniversity = ({
     <main className="container py-8">
       <h1 className="sub-heading text-primary">{university?.universityName}</h1>
 
-      <div className="mt-6 h-[583px] w-full">
+      <div className="mt-6  lg:h-[583px] w-full">
         <Image
           src={university!.universityPhoto}
           alt="best universities"
-          className="h-full w-full rounded-3xl"
+          className="h-full w-full rounded-3xl object-cover object-top"
         ></Image>
       </div>
 

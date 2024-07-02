@@ -10,6 +10,7 @@ import rlarrow from "./assets/RLarrow.webp";
 import register from "./assets/register.webp";
 import Pathway from "@/components/common/dk/pathway";
 import FAQ from "@/components/common/faq/FAQ";
+import { MdOutlineTask } from "react-icons/md";
 type testPreparationType = {
   params: {
     preparation: string;
@@ -40,30 +41,31 @@ const TestPrepartion = ({ params }: testPreparationType) => {
         title={`${currentTest?.id}`}
       />
       {/* test format */}
-      <div className="container">
-        <h3 className="small-sub-heading text-center text-primary">
+      <div className="container py-[144px]">
+        <h3 className="small-sub-heading text-center text-primary ">
           {currentTest?.id} Test Format in Detail:
         </h3>
 
-        <table className="border-collapse border">
+        <table className="border-collapse border rounded-xl w-full bg-[#f7f7ff] mt-6">
           <>
             <thead className="border">
-              <tr className="border">
-                {currentTest?.testFormat &&
-                  currentTest?.testFormat[0].map((hed) => (
-                    <th key={hed[0]}>{hed}</th>
-                  ))}
-              </tr>
-            </thead>
+                <tr className="border bg-primary text-span-white ">
+                  {currentTest?.testFormat &&
+                    currentTest?.testFormat[0].map((hed) => (
+                      <th key={hed[0]} className="border py-4 px-6">{hed}</th>
+                    ))}
+                </tr>
+              </thead> 
 
-            <tbody className="border">
+            <tbody className="border rounded-xl">
               {currentTest?.testFormat &&
                 currentTest?.testFormat.map((data: any, ind) => (
-                  <tr key={ind} className="border">
+                  <tr key={ind} className="border ">
                     {data.map((tabledata: any) => (
-                      <td key={tabledata} className="border">
+                      <td key={tabledata} className="border py-4 px-6">
                         {Array.isArray(tabledata)
-                          ? tabledata.map((t) => <p key={t}>{t}</p>)
+                          ? tabledata.map((t) => <p key={t} className=" flex mt-3  gap-1"><div className="mt-1"><MdOutlineTask  className="text-primary"/></div>
+ {t}</p>)
                           : tabledata}
                       </td>
                     ))}

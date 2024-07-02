@@ -125,7 +125,7 @@ export const testPreparationData = [
           "Re-tell Lecture",
           "Answer Short Questions",
         ],
-        "40 items",
+        
         ["1", "6-7", "10-12", "3-4", "1-2", "5-6"],
       ],
       [

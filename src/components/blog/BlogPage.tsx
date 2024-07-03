@@ -4,7 +4,7 @@ import BlogCard from "./BlogCard";
 const BlogPage = () => {
   return (
     <section className="bg-[#f7f7ff]">
-      <div className="container py-[80px]">
+      <div className="container py-10 sm:py-[60px] lg:py-[80px]">
         <div className="text-center">
           <h3 className="small-sub-heading">
             <span className="leading-5">

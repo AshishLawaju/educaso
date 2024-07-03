@@ -38,7 +38,7 @@ const Whatwedo = () => {
   return (
     <section className="bg-[#f7f7ff] my-8 sm:py-14 lg:py-[116px]">
       <div className="container flex max-lg:flex-col-reverse max-lg:gap-8">
-        <div className="grid flex-1 grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 place-content-center place-items-center">
+        <div className="grid flex-1 grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3 place-content-center place-items-center">
           {whatwedoData.map((whatwedo) => (
             <div key={whatwedo.title} className="w-full">
               <Whatwedocard title={whatwedo.title} image={whatwedo.image} />

@@ -57,7 +57,7 @@ const ContactUs = () => {
               </div>
               <div>
                 <p>infoeducasoabroad@gmail.com </p>
-                <p>infoeducasoabroadconsultancy@gmail.com</p>
+                <p className="break-all	">infoeducasoabroadconsultancy@gmail.com</p>
                 <p>mayakarki020@gmail.com</p>
               </div>
             </div>

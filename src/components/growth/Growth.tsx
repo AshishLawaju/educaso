@@ -3,7 +3,7 @@ import globe from "./assets/globe.webp";
 const Growth = () => {
   return (
     <section className="bg-primary text-background">
-      <div className="container py-20">
+      <div className="container py-10 sm:py-20">
         <div className="flex justify-between gap-8 max-lg:flex-col lg:gap-20">
           <div className="flex-1">
             <h2 className="font-raleway text-[22px] font-bold leading-tight sm:text-[32px] lg:text-[48px]">

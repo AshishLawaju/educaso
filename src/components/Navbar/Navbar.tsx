@@ -105,7 +105,7 @@ const Navbar = () => {
   const [smallExtendedNav, setSmallExtendedNav] = useState("");
   const [smallExtendedNav2, setSmallExtendedNav2] = useState("");
   return (
-    <nav className="sticky top-0 z-50 bg-[#fffffe] shadow-sm">
+    <nav className="sticky top-0 z-50 bg-[#fffffe] shadow-sm overflow-x-hidden">
       <div className="max-sm:py-3 max-xl:py-4 container relative flex items-center justify-between">
         <div className="h-[36px] w-[132px] cursor-pointer">
           <Link href={"/"}>

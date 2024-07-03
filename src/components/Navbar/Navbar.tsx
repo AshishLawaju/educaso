@@ -350,9 +350,12 @@ const Navbar = () => {
                           <MdOutlineArrowDropDown className="text-[24px]" />
                         </>
                       ) : (
-                        <Link href={navlink.link} onClick={()=>setSmallNav(false)}>
-                        {navlink.name}
-                        </Link> 
+                        <Link
+                          href={navlink.link}
+                          onClick={() => setSmallNav(false)}
+                        >
+                          {navlink.name}
+                        </Link>
                       )}
                     </p>
                   </>
@@ -362,9 +365,14 @@ const Navbar = () => {
                       {smallExtendedNav == "Services" &&
                         navlink.name == "Services" && (
                           <ul className="ml-3 text-sm font-light text-sub-heading">
-                            {serviceLink.map((serv) => (
-                              <li className="border-b p-1" key={serv}>
-                                {serv}
+                            {servicesData.map((serv) => (
+                              <li className="border-b p-1" key={serv.title}>
+                                <Link
+                                  href={`/services/${serv.id}`}
+                                  onClick={() => setSmallNav(false)}
+                                >
+                                  {serv.title}
+                                </Link>
                               </li>
                             ))}
                           </ul>
@@ -413,11 +421,17 @@ const Navbar = () => {
                       {smallExtendedNav == "Test Preparation" &&
                         navlink.name == "Test Preparation" && (
                           <ul className="ml-3 text-sm font-light">
-                            <li className="border-b p-1">IELTS</li>
-                            <li className="border-b p-1">PTE</li>
-                            <li className="border-b p-1">Duolingo</li>
-                            <li className="border-b p-1">Korean</li>
-                            <li className="border-b p-1">Japanese</li>
+                            {testLink.map((service) => (
+                              <Link
+                                onClick={() => setSmallNav(false)}
+                                key={service.id}
+                                href={`/testpreparation/${service.id}`}
+                              >
+                                <li className="cursor-pointer border-b border-[#e8e8e8]">
+                                  {service.title}
+                                </li>
+                              </Link>
+                            ))}
                           </ul>
                         )}
                     </>

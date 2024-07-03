@@ -20,7 +20,7 @@ const SinglePageUniversity = ({
   // console.log("after university");
 
   return (
-    <main className="container py-8">
+    <main className="container py-8 pb-16">
       <h1 className="sub-heading text-primary">{university?.universityName}</h1>
 
       <div className="mt-6  lg:h-[583px] w-full">

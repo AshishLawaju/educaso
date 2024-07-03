@@ -20,6 +20,18 @@ import wolver from "./assets/Wolverhampton.webp";
 import bpp from "./assets/BPP.webp";
 import greenwish from "./assets/Greenwich.webp";
 import kent from "./assets/Kent.webp";
+
+/* flag */
+
+import denmarkflag from "./assets/flag/denmark.webp";
+import franchflag from "./assets/flag/franch.webp";
+import germanyflag from "./assets/flag/germany.webp";
+import irelandflag from "./assets/flag/ireland.webp";
+import koreaflag from "./assets/flag/korea.webp";
+import ukflag from "./assets/flag/uk.webp";
+import unknownflag from "./assets/flag/unknownFlag.webp";
+import usaflag from "./assets/flag/usa.webp";
+import norwayflag from "./assets/flag/norway.webp";
 export const universityData = [
   {
     flag: korea,
@@ -43,112 +55,112 @@ export const universityData = [
     id: "Dong-AUniversity",
   },
   {
-    flag: denmark,
+    flag: norwayflag,
     universityName: "Copenhagen Business College",
     universityPhoto: Copenhagen,
     data: " Copenhagen Business College is located right in the heart of Copenhagen. The faculty building is in a newly renovated classic university building that reflects the history of Copenhagen Business College which dates back more than 140 years. \n In partnership with the De Montfort University, Niels Brock Copenhagen Business College offers different types of UK accredited programmes from September 2023: A three year Bachelor in Business Management, a one year top-up Bachelor Degree in Business Administration, and a three year BSc (Hons) in Computer Science.  ",
     id: "CopenhagenBusinessCollege",
   },
   {
-    flag: franch,
+    flag: franchflag,
     universityName: "Aura International School of Management",
     universityPhoto: auro,
     data: "Aura Lyon is a fast-emerging private school offering world-class Management Programs. Built on marketing and management techniques the syllabus is drawn from varied business segments and successful start-ups. \n The courses are modelled on current-day management disciplines and novel approaches. ",
     id: "AuraInternationalSchoolofManagement",
   },
   {
-    flag: franch,
+    flag: unknownflag,
     universityName: "Wittenborg University of Applied Science",
     universityPhoto: Wittenborg,
     data: "Wittenborg University of Applied Sciences is a private, international university located in the Netherlands. It offers a range of bachelor's, master's, and MBA programs in various fields such as business, management, hospitality, tourism, and education. \nEstablished in 1987, Wittenborg has a strong focus on providing practical, hands-on education that prepares students for careers in their chosen industries. The university prides itself on its diverse student body and faculty, with students from over 100 different countries studying there. Wittenborg emphasizes an international and multicultural learning environment, with English as the primary language of instruction. ",
     id: "WittenborgUniversityofAppliedScience",
   },
   {
-    flag: franch,
+    flag: franchflag,
     universityName: "College De Paris",
     universityPhoto: deparis,
     data: "Collège de Paris is a group of higher education establishments and training organizations. With a catalog of training courses that cover a large number of areas, the group surrounds itself with the best partners to meet the challenges of training around the world. Collège de Paris has one main mission: to make excellence accessible through a community of schools. \nFounded on strong values, the group places educational quality, international openness and individualized support towards employment at the center of its development. Collège de Paris has more than 18,000 students, 35,000 adults in continuing education among more than 70 own establishments and more than 150 partners around the world.",
     id: "CollegeDeParis",
   },
   {
-    flag: franch,
+    flag: ukflag,
     universityName: "University of Chester",
     universityPhoto: chester,
     data: "Kyungsung University is one of the top private universities in Busan, South Korea. It is ranked #350 in Asian University Rankings - Eastern Asia 2024. It is a private university in Busan, South Korea. \nThe university has 10 undergraduate colleges (Liberal Arts, Law and Politics, Commerce and Economics, Science, Engineering, Pharmacy, Arts, Theology, Multimedia, and Chinese) encompassing 7 different faculties and 54 departments at the time of 2011. There are seven graduate schools (General, International Management, Multimedia, Education, Social Welfare, Clinical Pharmacy, and Digital Design). \nIn addition, seven affiliated organizations and seven affiliated research institutes have been established to aid teaching and research. Kyungsung University's 700 employees and over 13,000 students are all working together to achieve the school's educational goals.",
     id: "UniversityofChester",
   },
   {
-    flag: franch,
+    flag: norwayflag,
     universityName: "IBA Denmark",
     universityPhoto: iba,
     data: "Kyungsung University is one of the top private universities in Busan, South Korea. It is ranked #350 in Asian University Rankings - Eastern Asia 2024. It is a private university in Busan, South Korea. \nThe university has 10 undergraduate colleges (Liberal Arts, Law and Politics, Commerce and Economics, Science, Engineering, Pharmacy, Arts, Theology, Multimedia, and Chinese) encompassing 7 different faculties and 54 departments at the time of 2011. There are seven graduate schools (General, International Management, Multimedia, Education, Social Welfare, Clinical Pharmacy, and Digital Design). \nIn addition, seven affiliated organizations and seven affiliated research institutes have been established to aid teaching and research. Kyungsung University's 700 employees and over 13,000 students are all working together to achieve the school's educational goals.",
     id: "IBADenmark",
   },
   {
-    flag: franch,
+    flag: usaflag,
     universityName: "Webster University",
     universityPhoto: webster,
     data: "Kyungsung University is one of the top private universities in Busan, South Korea. It is ranked #350 in Asian University Rankings - Eastern Asia 2024. It is a private university in Busan, South Korea. \nThe university has 10 undergraduate colleges (Liberal Arts, Law and Politics, Commerce and Economics, Science, Engineering, Pharmacy, Arts, Theology, Multimedia, and Chinese) encompassing 7 different faculties and 54 departments at the time of 2011. There are seven graduate schools (General, International Management, Multimedia, Education, Social Welfare, Clinical Pharmacy, and Digital Design). \nIn addition, seven affiliated organizations and seven affiliated research institutes have been established to aid teaching and research. Kyungsung University's 700 employees and over 13,000 students are all working together to achieve the school's educational goals.",
     id: "WebsterUniversity",
   },
   {
-    flag: franch,
+    flag: irelandflag,
     universityName: "IBAT College",
     universityPhoto: ibat,
     data: "Kyungsung University is one of the top private universities in Busan, South Korea. It is ranked #350 in Asian University Rankings - Eastern Asia 2024. It is a private university in Busan, South Korea. \nThe university has 10 undergraduate colleges (Liberal Arts, Law and Politics, Commerce and Economics, Science, Engineering, Pharmacy, Arts, Theology, Multimedia, and Chinese) encompassing 7 different faculties and 54 departments at the time of 2011. There are seven graduate schools (General, International Management, Multimedia, Education, Social Welfare, Clinical Pharmacy, and Digital Design). \nIn addition, seven affiliated organizations and seven affiliated research institutes have been established to aid teaching and research. Kyungsung University's 700 employees and over 13,000 students are all working together to achieve the school's educational goals.",
     id: "IBATCollege",
   },
   {
-    flag: franch,
+    flag: ukflag,
     universityName: "University of Poehampton",
     universityPhoto: roe,
     data: "Kyungsung University is one of the top private universities in Busan, South Korea. It is ranked #350 in Asian University Rankings - Eastern Asia 2024. It is a private university in Busan, South Korea. \n The university has 10 undergraduate colleges (Liberal Arts, Law and Politics, Commerce and Economics, Science, Engineering, Pharmacy, Arts, Theology, Multimedia, and Chinese) encompassing 7 different faculties and 54 departments at the time of 2011. There are seven graduate schools (General, International Management, Multimedia, Education, Social Welfare, Clinical Pharmacy, and Digital Design). \nIn addition, seven affiliated organizations and seven affiliated research institutes have been established to aid teaching and research. Kyungsung University's 700 employees and over 13,000 students are all working together to achieve the school's educational goals.",
     id: "UniversityofPoehampton",
   },
   {
-    flag: franch,
+    flag: germanyflag,
     universityName: "GISMA University of Applied Science",
     universityPhoto: gisma,
     data: "Kyungsung University is one of the top private universities in Busan, South Korea. It is ranked #350 in Asian University Rankings - Eastern Asia 2024. It is a private university in Busan, South Korea. \n The university has 10 undergraduate colleges (Liberal Arts, Law and Politics, Commerce and Economics, Science, Engineering, Pharmacy, Arts, Theology, Multimedia, and Chinese) encompassing 7 different faculties and 54 departments at the time of 2011. There are seven graduate schools (General, International Management, Multimedia, Education, Social Welfare, Clinical Pharmacy, and Digital Design). \nIn addition, seven affiliated organizations and seven affiliated research institutes have been established to aid teaching and research. Kyungsung University's 700 employees and over 13,000 students are all working together to achieve the school's educational goals.",
     id: "GISMAUniversityofAppliedScience",
   },
   {
-    flag: franch,
+    flag: usaflag,
     universityName: "Southeast Missouri State University",
     universityPhoto: missouri,
     data: "Kyungsung University is one of the top private universities in Busan, South Korea. It is ranked #350 in Asian University Rankings - Eastern Asia 2024. It is a private university in Busan, South Korea. \n The university has 10 undergraduate colleges (Liberal Arts, Law and Politics, Commerce and Economics, Science, Engineering, Pharmacy, Arts, Theology, Multimedia, and Chinese) encompassing 7 different faculties and 54 departments at the time of 2011. There are seven graduate schools (General, International Management, Multimedia, Education, Social Welfare, Clinical Pharmacy, and Digital Design). \nIn addition, seven affiliated organizations and seven affiliated research institutes have been established to aid teaching and research. Kyungsung University's 700 employees and over 13,000 students are all working together to achieve the school's educational goals.",
     id: "SoutheastMissouriStateUniversity",
   },
   {
-    flag: franch,
+    flag: usaflag,
     universityName: "Saginaw Valley State University  ",
     universityPhoto: saginaw,
     data: "Kyungsung University is one of the top private universities in Busan, South Korea. It is ranked #350 in Asian University Rankings - Eastern Asia 2024. It is a private university in Busan, South Korea. \n The university has 10 undergraduate colleges (Liberal Arts, Law and Politics, Commerce and Economics, Science, Engineering, Pharmacy, Arts, Theology, Multimedia, and Chinese) encompassing 7 different faculties and 54 departments at the time of 2011. There are seven graduate schools (General, International Management, Multimedia, Education, Social Welfare, Clinical Pharmacy, and Digital Design). \nIn addition, seven affiliated organizations and seven affiliated research institutes have been established to aid teaching and research. Kyungsung University's 700 employees and over 13,000 students are all working together to achieve the school's educational goals.",
     id: "SaginawValleyStateUniversity",
   },
   {
-    flag: franch,
+    flag: ukflag,
     universityName: "University of Wolverhampton ",
     universityPhoto: wolver,
     data: "Kyungsung University is one of the top private universities in Busan, South Korea. It is ranked #350 in Asian University Rankings - Eastern Asia 2024. It is a private university in Busan, South Korea. \n The university has 10 undergraduate colleges (Liberal Arts, Law and Politics, Commerce and Economics, Science, Engineering, Pharmacy, Arts, Theology, Multimedia, and Chinese) encompassing 7 different faculties and 54 departments at the time of 2011. There are seven graduate schools (General, International Management, Multimedia, Education, Social Welfare, Clinical Pharmacy, and Digital Design). \nIn addition, seven affiliated organizations and seven affiliated research institutes have been established to aid teaching and research. Kyungsung University's 700 employees and over 13,000 students are all working together to achieve the school's educational goals.",
     id: "UniversityofWolverhampton",
   },
   {
-    flag: franch,
+    flag: ukflag,
     universityName: "BPP University",
     universityPhoto: bpp,
     data: "Kyungsung University is one of the top private universities in Busan, South Korea. It is ranked #350 in Asian University Rankings - Eastern Asia 2024. It is a private university in Busan, South Korea. \n The university has 10 undergraduate colleges (Liberal Arts, Law and Politics, Commerce and Economics, Science, Engineering, Pharmacy, Arts, Theology, Multimedia, and Chinese) encompassing 7 different faculties and 54 departments at the time of 2011. There are seven graduate schools (General, International Management, Multimedia, Education, Social Welfare, Clinical Pharmacy, and Digital Design). \nIn addition, seven affiliated organizations and seven affiliated research institutes have been established to aid teaching and research. Kyungsung University's 700 employees and over 13,000 students are all working together to achieve the school's educational goals.",
     id: "BPPUniversity",
   },
   {
-    flag: franch,
+    flag: ukflag,
     universityName: "University of Greenwich",
     universityPhoto: greenwish,
     data: "Kyungsung University is one of the top private universities in Busan, South Korea. It is ranked #350 in Asian University Rankings - Eastern Asia 2024. It is a private university in Busan, South Korea. \n The university has 10 undergraduate colleges (Liberal Arts, Law and Politics, Commerce and Economics, Science, Engineering, Pharmacy, Arts, Theology, Multimedia, and Chinese) encompassing 7 different faculties and 54 departments at the time of 2011. There are seven graduate schools (General, International Management, Multimedia, Education, Social Welfare, Clinical Pharmacy, and Digital Design). \nIn addition, seven affiliated organizations and seven affiliated research institutes have been established to aid teaching and research. Kyungsung University's 700 employees and over 13,000 students are all working together to achieve the school's educational goals.",
     id: "UniversityofGreenwich",
   },
   {
-    flag: franch,
+    flag: ukflag,
     universityName: "University of Kent",
     universityPhoto: kent,
     data: "Kyungsung University is one of the top private universities in Busan, South Korea. It is ranked #350 in Asian University Rankings - Eastern Asia 2024. It is a private university in Busan, South Korea. \n The university has 10 undergraduate colleges (Liberal Arts, Law and Politics, Commerce and Economics, Science, Engineering, Pharmacy, Arts, Theology, Multimedia, and Chinese) encompassing 7 different faculties and 54 departments at the time of 2011. There are seven graduate schools (General, International Management, Multimedia, Education, Social Welfare, Clinical Pharmacy, and Digital Design). \nIn addition, seven affiliated organizations and seven affiliated research institutes have been established to aid teaching and research. Kyungsung University's 700 employees and over 13,000 students are all working together to achieve the school's educational goals.",

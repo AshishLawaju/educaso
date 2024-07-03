@@ -4,9 +4,9 @@ const Growth = () => {
   return (
     <section className="bg-primary text-background">
       <div className="container py-20">
-        <div className="flex justify-between gap-20">
+        <div className="flex justify-between gap-8 max-lg:flex-col lg:gap-20">
           <div className="flex-1">
-            <h2 className="font-raleway text-[48px] font-bold leading-tight">
+            <h2 className="font-raleway text-[22px] font-bold leading-tight sm:text-[32px] lg:text-[48px]">
               Accelerating your academic growth overseas
             </h2>
             <p className="mt-3">
@@ -18,15 +18,19 @@ const Growth = () => {
             </p>
           </div>
 
-          <div className="flex flex-1 items-center justify-end">
-            <Image src={globe} alt="connecting educaso to world"></Image>
+          <div className="flex flex-1 items-center justify-center lg:justify-end">
+            <Image
+              src={globe}
+              alt="connecting educaso to world"
+              className="max-lg:w-full"
+            ></Image>
           </div>
         </div>
 
         <hr className="my-[48px] w-full text-[#979DED]" />
 
-        <div className="grid grid-cols-3 justify-items-center text-center">
-          <div>
+        <div className="grid-col-1 grid justify-items-center text-center max-sm:text-sm sm:grid-cols-3 gap-y-6">
+          <div className="">
             <p className="text-center font-light text-background">
               INTERNATIONAL STUDENTS <br /> ASSISTED
             </p>

@@ -16,7 +16,7 @@ const BlogPage = () => {
             Recent Articles on Events, Offers, <br /> and Activities
           </h2>
         </div>
-        <div className="mt-11 grid grid-cols-3 gap-3">
+        <div className="mt-11 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           <BlogCard />
           <BlogCard />
           <BlogCard />

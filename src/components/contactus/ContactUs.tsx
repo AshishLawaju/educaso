@@ -119,8 +119,8 @@ const ContactUs = () => {
           >
             {() => (
               <Form>
-                <div className="mt-5 flex justify-between gap-6">
-                  <div className="flex flex-col">
+                <div className="mt-5 flex max-xl:flex-col justify-between gap-6">
+                  <div className="flex flex-col ">
                     <label htmlFor="">
                       First Name{" "}
                       <span className="text-[#a3a3a3]">(required)</span>
@@ -154,7 +154,7 @@ const ContactUs = () => {
                   </div>
                 </div>
 
-                <div className="mt-5 flex justify-between gap-6">
+                <div className="mt-5 flex  max-xl:flex-col justify-between gap-6">
                   <div className="flex flex-col">
                     <label htmlFor="">
                       Email

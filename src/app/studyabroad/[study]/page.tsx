@@ -43,7 +43,7 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
         path={` / Study Abroad / ${currentStudy?.title}`}
       />
 
-      <div className="container flex flex-col lg:flex-row max-lg:gap-8 items-center gap-x-[116px] py-[100px]">
+      <div className="container flex flex-col items-center gap-x-[116px] py-[32px] max-lg:gap-8 sm:py-[60px] lg:flex-row lg:py-[100px]">
         <div className="lg:basis-3/5">
           {currentStudy?.description1.split("\n").map((para) => (
             <p key={para} className="mt-3">
@@ -64,7 +64,7 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
         </div>
       </div>
 
-      <div className="container flex gap-[135px]">
+      <div className="container flex lg:gap-[135px]">
         <div className="h-[329px] w-[489px] flex-1 max-lg:hidden">
           <Image
             src={studyhere}
@@ -98,9 +98,9 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
           ))}
         </div>
       </div>
-
-      <div className="container flex justify-between gap-[110px]">
-        <div className="w-[50%]">
+      {/* break  */}
+      <div className="container flex flex-col justify-between gap-[40px] lg:flex-row lg:gap-[110px]">
+        <div className="lg:w-[50%]">
           <h3 className="small-sub-heading">
             <span className="leading-5">
               <Capital character="E" />
@@ -122,15 +122,15 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
             ))}
           </ul>
         </div>
-        <div className="relative flex w-[50%] justify-end">
-          <div className="h-[441px] w-[398px]">
+        <div className="relative justify-end lg:flex lg:w-[50%]">
+          <div className="h-[441px] w-[398px] max-lg:hidden">
             <Image
-              className="h-full w-full"
+              className="h-full w-full "
               alt={`${currentStudy?.title}`}
               src={currentStudy!.educationImage}
             ></Image>
           </div>
-          <div className="absolute -bottom-5">
+          <div className="-bottom-5 w-full lg:absolute max-lg:pb-10">
             <StudyTesti testi={currentStudy!.educationDialog} />
           </div>
         </div>

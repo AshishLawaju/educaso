@@ -27,9 +27,13 @@ const ServicePage: React.FC<ServicePageProps> = ({ params }) => {
 
   return (
     <div className="py-8">
-      <BreadCum photo={myservice?.breadPhoto} title={myservice?.title} path={pathname} />
-      <div className="container flex items-center justify-between py-[116px]">
-        <div className="basis-3/5">
+      <BreadCum
+        photo={myservice?.breadPhoto}
+        title={myservice?.title}
+        path={` / Services / ${myservice?.title}`}
+      />
+      <div className="container flex items-center justify-between py-10 sm:py-14 lg:py-[116px]">
+        <div className="lg:basis-3/5">
           {/* {myservice?.title} */}
           <p>{myservice?.description}</p>
           <ul className="flex flex-col gap-6 py-8">
@@ -41,7 +45,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ params }) => {
           </ul>
           <p>{myservice?.conclusion}</p>
         </div>
-        <div className="flex flex-1 basis-2/5 justify-end">
+        <div className="flex flex-1 basis-2/5 justify-end max-lg:hidden">
           <div className="h-[485px] w-[403px]">
             <Image
               alt="language preparation"

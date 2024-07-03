@@ -14,12 +14,11 @@ const AboutUs = () => {
       <AboutHero />
       <AboutWhoR />
 
-      <div
-        className="h-[50vh] w-full  bg-fixed bg-center lg:hidden"
+  {/*     <div
+        className="h-[50vh] w-full  bg-fixed bg-center lg:hiddenx"
         style={{ backgroundImage: `url(${aboutbanner.src})` }}
       >
-        {/* <Image alt="gratuate" src={aboutbanner} className="" ></Image> */}
-      </div>
+      </div> */}
       <OurMission />
       <Whatwedo />
       <Testimonials />

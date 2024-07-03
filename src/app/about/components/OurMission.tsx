@@ -4,7 +4,7 @@ import mission1 from "./assets/mission1.webp";
 import mission2 from "./assets/mission2.webp";
 const OurMission = () => {
   return (
-    <section className="container flex py:10 sm:py-20  lg:py-[116px]">
+    <section className="container flex py-10 sm:py-14  lg:py-[116px]">
       <div className="flex-1 flex justify-center relative max-lg:hidden">
         <Image alt="our mission" src={mission1} className="absolute left-0 -top-16"></Image>
         <Image alt="our mission" src={mission2} ></Image>

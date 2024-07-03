@@ -40,18 +40,18 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
       <BreadCum
         photo={currentStudy?.breadcumPhoto}
         title={currentStudy?.title}
-        path={pathname}
+        path={` / Study Abroad / ${currentStudy?.title}`}
       />
 
-      <div className="container flex items-center gap-x-[116px] py-[100px]">
-        <div className="basis-3/5">
+      <div className="container flex flex-col lg:flex-row max-lg:gap-8 items-center gap-x-[116px] py-[100px]">
+        <div className="lg:basis-3/5">
           {currentStudy?.description1.split("\n").map((para) => (
             <p key={para} className="mt-3">
               {para}
             </p>
           ))}
         </div>
-        <div className="container basis-2/5">
+        <div className="container lg:basis-2/5">
           <div className="h-[472] w-[434]">
             <Image
               className="h-full w-full"
@@ -65,7 +65,7 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
       </div>
 
       <div className="container flex gap-[135px]">
-        <div className="h-[329px] w-[489px] flex-1">
+        <div className="h-[329px] w-[489px] flex-1 max-lg:hidden">
           <Image
             src={studyhere}
             alt="best consaltancy"

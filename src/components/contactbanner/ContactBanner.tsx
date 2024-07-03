@@ -2,7 +2,7 @@ import Button from "../common/button/Button";
 
 const ContactBanner = () => {
   return (
-    <section className="container py-10 sm:py-40 lg:py-[116px]">
+    <section className="container py-10x sm:py-40x lg:py-[116px]">
       <div className="flex flex-col items-center justify-between rounded-3xl bg-primary p-[32px] sm:p-[60px] text-background max-lg:justify-start lg:flex-row">
         <div>
           <h2 className="sub-heading text-background lg:w-[55%]">

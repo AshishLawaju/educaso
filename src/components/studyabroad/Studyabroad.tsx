@@ -51,7 +51,7 @@ const Studyabroad = () => {
     return (
       <div
         className={
-          "absolute -top-24 right-3 flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-xl border-2 border-primary hover:bg-primary hover:text-[#ffffff]"
+          "absolute -top-24 right-3 flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-xl border-2 border-primary hover:bg-primary hover:text-[#ffffff] max-lg:hidden"
         }
         // style={{ ...style, display: "block", background: "red" }}
         onClick={onClick}
@@ -66,7 +66,7 @@ const Studyabroad = () => {
     return (
       <div
         className={
-          "absolute -top-24 right-16 flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-lg border-2 border-primary hover:bg-primary hover:text-[#ffffff] "
+          "absolute -top-24 right-16 flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-lg border-2 border-primary hover:bg-primary hover:text-[#ffffff] max-lg:hidden"
         }
         onClick={onClick}
       >
@@ -80,21 +80,22 @@ const Studyabroad = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    
     // arrows:true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1279,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -102,7 +103,7 @@ const Studyabroad = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

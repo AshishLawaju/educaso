@@ -105,8 +105,8 @@ const Navbar = () => {
   const [smallExtendedNav, setSmallExtendedNav] = useState("");
   const [smallExtendedNav2, setSmallExtendedNav2] = useState("");
   return (
-    <nav className="sticky top-0 z-50 bg-[#fffffe] shadow-sm ">
-      <div className="max-sm:py-3 max-xl:py-4 container relative flex items-center justify-between">
+    <nav className="sticky top-0 z-50 bg-[#fffffe] shadow-sm">
+      <div className="container relative flex items-center justify-between max-xl:py-4 max-sm:py-3">
         <div className="h-[36px] w-[132px] cursor-pointer">
           <Link href={"/"}>
             <Image src={logo} alt="educaso" className="h-full w-full"></Image>
@@ -333,7 +333,7 @@ const Navbar = () => {
       <div className="xl:hidden">
         {true && (
           <div
-            className={`absolute left-0 top-0 flex w-full flex-col justify-center ml-[30%] h-[100vh] bg-[#fffffe] p-4 ${smallNav ? "translate-x-0 opacity-100 transition-all duration-300 ease-in-out" : "translate-x-[999px] overflow-x-hidden opacity-0 transition-all duration-300 ease-in-out"} -z-10`}
+            className={`absolute left-0 top-0 ml-[30%] flex h-[100vh] w-full flex-col justify-center bg-[#fffffe] p-4 ${smallNav ? "translate-x-0x w-full opacity-100 transition-all duration-300 ease-out" : "translate-x-[999px]x w-0 opacity-0 transition-all duration-300 ease-in-out"} -z-10`}
           >
             <div className="container">
               {navLinks.map((navlink) => (
@@ -343,16 +343,16 @@ const Navbar = () => {
                   onClick={() => setSmallExtendedNav(navlink.name)}
                 >
                   <Link href={``}>
-                  <p className="flex cursor-pointer items-center gap-1">
-                    {navlink.name}
+                    <p className="flex cursor-pointer items-center gap-1">
+                      {navlink.name}
 
-                    {!navlink.link && (
-                      <>
-                        <MdOutlineArrowDropDown className="text-[24px]" />
-                      </>
-                    )}
-                  </p>
-                    </Link>
+                      {!navlink.link && (
+                        <>
+                          <MdOutlineArrowDropDown className="text-[24px]" />
+                        </>
+                      )}
+                    </p>
+                  </Link>
 
                   {
                     <>

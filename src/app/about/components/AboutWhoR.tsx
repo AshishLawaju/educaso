@@ -3,7 +3,7 @@ import Image from "next/image";
 import aboutwho from "./assets/aboutwho.webp";
 const AboutWhoR = () => {
   return (
-    <section className="container flex py-[116px] gap-[94px]">
+    <section className="container flex py:10 sm:py-20  lg:py-[116px] gap-[94px]">
       <div className="flex-1">
         <h3 className="small-sub-heading capitalize text-primary">
           <span className="leading-5">
@@ -27,7 +27,7 @@ const AboutWhoR = () => {
           interest. We offer the most ideal and friendly atmosphere.
         </p>
       </div>
-      <div className="flex-1 ">
+      <div className="flex-1 max-lg:hidden ">
         <Image src={aboutwho} alt="about educaso" className=""></Image>
       </div>
     </section>

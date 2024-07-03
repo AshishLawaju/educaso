@@ -29,7 +29,7 @@ const TestPrepartion = ({ params }: testPreparationType) => {
 
   return (
     <main className="py-8">
-    {  <div className="max-sm:px-3">
+    {  <div className="">
         <BreadCum
           photo={testBanner}
           title={currentTest?.id}

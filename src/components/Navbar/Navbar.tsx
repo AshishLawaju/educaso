@@ -333,7 +333,7 @@ const Navbar = () => {
       <div className="xl:hidden">
         {true && (
           <div
-            className={`absolute left-0 top-0 flex h-[100vh] w-[70%] flex-col justify-center bg-[#fffffe] p-4 ${smallNav ? "translate-x-0x opacity-100 transition-all duration-300 ease-out" : "translate-x-[999px]x w-0 opacity-0 transition-all duration-300 ease-in-out"} -z-10`}
+            className={`absolute left-0 top-0 flex h-[100vh] w-[70%] flex-col justify-center bg-[#fffffe] p-4 text-span-black ${smallNav ? "translate-x-0x opacity-100 transition-all duration-300 ease-out" : "translate-x-[999px]x w-0 opacity-0 transition-all duration-300 ease-in-out"} -z-10`}
           >
             <div className="container">
               {navLinks.map((navlink) => (
@@ -342,25 +342,28 @@ const Navbar = () => {
                   key={navlink.name}
                   onClick={() => setSmallExtendedNav(navlink.name)}
                 >
-                  <Link href={``}>
+                  <>
                     <p className="flex cursor-pointer items-center gap-1">
-                      {navlink.name}
-
-                      {!navlink.link && (
+                      {!navlink.link ? (
                         <>
+                          {navlink.name}{" "}
                           <MdOutlineArrowDropDown className="text-[24px]" />
                         </>
+                      ) : (
+                        <Link href={navlink.link} onClick={()=>setSmallNav(false)}>
+                        {navlink.name}
+                        </Link> 
                       )}
                     </p>
-                  </Link>
+                  </>
 
                   {
                     <>
                       {smallExtendedNav == "Services" &&
                         navlink.name == "Services" && (
-                          <ul className="ml-3 text-sm font-light">
+                          <ul className="ml-3 text-sm font-light text-sub-heading">
                             {serviceLink.map((serv) => (
-                              <li key={serv} className="border-b p-1">
+                              <li className="border-b p-1" key={serv}>
                                 {serv}
                               </li>
                             ))}

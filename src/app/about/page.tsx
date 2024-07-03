@@ -15,7 +15,7 @@ const AboutUs = () => {
       <AboutWhoR />
 
       <div
-        className="h-[50vh] w-full bg-cover bg-fixed bg-center lg:hidden"
+        className="h-[50vh] w-full  bg-fixed bg-center lg:hidden"
         style={{ backgroundImage: `url(${aboutbanner.src})` }}
       >
         {/* <Image alt="gratuate" src={aboutbanner} className="" ></Image> */}

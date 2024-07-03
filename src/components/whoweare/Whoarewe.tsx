@@ -49,7 +49,7 @@ const Whoarewe = () => {
         </div>
         <Image
           src={img1}
-          className="absolute left-3 top-0 -z-10 scale-150"
+          className="absolute left-3 top-0 -z-10 scale-150 overflow-x-hidden"
           alt="all about educaso"
         ></Image>
       </div>

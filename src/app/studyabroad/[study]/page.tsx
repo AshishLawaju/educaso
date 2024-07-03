@@ -81,7 +81,7 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
         </div>
       </div>
 
-      <div className="my-20 flex flex-wrap justify-center gap-4 bg-[#f7f7ff] py-20 sm:justify-between">
+      <div className="my-20 flex flex-wrap justify-center gap-4 bg-[#f7f7ff] py-10 sm:py:16 lg:py-20 sm:justify-between">
         <h3 className="small-sub-heading w-full text-center">
           Studying in {currentStudy?.title} offers several compelling reasons
           for international students:

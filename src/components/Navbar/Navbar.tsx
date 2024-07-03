@@ -333,7 +333,7 @@ const Navbar = () => {
       <div className="xl:hidden">
         {true && (
           <div
-            className={`absolute left-0 top-0 ml-[30%] flex h-[100vh] w-full flex-col justify-center bg-[#fffffe] p-4 ${smallNav ? "translate-x-0x w-full opacity-100 transition-all duration-300 ease-out" : "translate-x-[999px]x w-0 opacity-0 transition-all duration-300 ease-in-out"} -z-10`}
+            className={`absolute left-0 top-0 flex h-[100vh] w-[70%] flex-col justify-center bg-[#fffffe] p-4 ${smallNav ? "translate-x-0x opacity-100 transition-all duration-300 ease-out" : "translate-x-[999px]x w-0 opacity-0 transition-all duration-300 ease-in-out"} -z-10`}
           >
             <div className="container">
               {navLinks.map((navlink) => (

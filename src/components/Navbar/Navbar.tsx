@@ -333,7 +333,7 @@ const Navbar = () => {
       <div className="xl:hidden">
         {true && (
           <div
-            className={`absolute left-0 top-0 flex h-[100vh] w-[70%] flex-col justify-center bg-[#fffffe] p-4 text-span-black ${smallNav ? "translate-x-0x opacity-100 transition-all duration-300 ease-out" : "-translate-x-[999px] w-0 opacity-0x transition-all duration-300 ease-in-out"} -z-10`}
+            className={`absolute left-0 top-0 flex h-[100vh] w-[70%] flex-col justify-center bg-[#fffffe] p-4 text-span-black ${smallNav ? "translate-x-0x opacity-100 transition-all duration-300 ease-out" : "opacity-0x w-0 -translate-x-[999px] transition-all duration-300 ease-in-out"} -z-10`}
           >
             <div className="container">
               {navLinks.map((navlink) => (
@@ -391,9 +391,19 @@ const Navbar = () => {
                                 onClick={() => setSmallExtendedNav2(serv.name)}
                               >
                                 <div className="flex items-center gap-1">
-                                  {serv.name}
-                                  {serv.sublink && (
-                                    <MdOutlineArrowDropDown className="text-[24px]" />
+                                  {serv.sublink ? (
+                                    <>
+                                      {" "}
+                                      {serv.name}{" "}
+                                      <MdOutlineArrowDropDown className="text-[24px]" />
+                                    </>
+                                  ) : (
+                                    <Link
+                                      href={`/studyabroad/${serv.id}`}
+                                      onClick={() => setSmallNav(false)}
+                                    >
+                                      {serv.name}
+                                    </Link>
                                   )}
                                 </div>
                                 {serv.sublink && (
@@ -403,7 +413,14 @@ const Navbar = () => {
                                         <>
                                           {serv.sublink.map((ser) => (
                                             <p key={`${ser}`} className="ml-4">
-                                              {ser.name}
+                                              <Link
+                                                onClick={() =>
+                                                  setSmallNav(false)
+                                                }
+                                                href={`/studyabroad/${ser.id}`}
+                                              >
+                                                {ser.name}
+                                              </Link>
                                             </p>
                                           ))}
                                         </>

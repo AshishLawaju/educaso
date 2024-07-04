@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BiSolidRightArrow } from "react-icons/bi";
 import { FaRegEnvelope } from "react-icons/fa";
 import { LuMapPin } from "react-icons/lu";
@@ -6,17 +7,17 @@ import { RiPlayMiniFill } from "react-icons/ri";
 
 const Footer = () => {
   const studyabroadData = [
-    "Study in USA",
-    "Study in UK",
-    "Study in Canada",
-    "Study in South Korea",
-    "Study in Japan",
-    "Study in Europe",
-    "Study in Australia",
+    { name: "Study in USA", id: "UnitedStates" },
+    { name: "Study in UK", id: "UnitedKingdom" },
+    { name: "Study in Canada", id: "Canada" },
+    { name: "Study in South Korea", id: "SouthKorea" },
+    { name: "Study in Japan", id: "Japan" },
+
+    { name: "Study in Australia", id: "Australia" },
   ];
   return (
     <footer className="bg-primary">
-      <main className="container flex flex-col justify-between gap-x-32x gap-y-10 py-12 text-background lg:flex-row">
+      <main className="gap-x-32x container flex flex-col justify-between gap-y-10 py-12 text-background lg:flex-row">
         <div>
           <div className="flex gap-2">
             <div className="flex h-[32px] w-[32px] items-center justify-center rounded-full border">
@@ -45,17 +46,22 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="justify-between sm:flex  lg:w-[53%]">
+        <div className="justify-between sm:flex lg:w-[53%]">
           <div>
             <h3 className="small-sub-heading text-background">Study Abroad</h3>
             <hr className="mt-3 w-[30%] border-[1.5px] border-background" />
             <div className="mt-6 flex flex-col gap-y-3">
               {studyabroadData.map((stu) => (
-                <div key={stu} className="flex items-center gap-4">
+                <div key={stu.name} className="flex items-center gap-4">
                   <div className="h-[12.5px] w-[6.25px] text-span-white">
                     <RiPlayMiniFill className="text-span-white" />
                   </div>
-                  {stu}
+                  <Link
+                    href={`/studyabroad/${stu.id}`}
+                    className="transition-all duration-300 ease-in-out hover:scale-105"
+                  >
+                    {stu.name}
+                  </Link>
                 </div>
               ))}
             </div>
@@ -71,19 +77,20 @@ const Footer = () => {
                 <div className="h-[12.5px] w-[6.25px] text-span-white">
                   <RiPlayMiniFill className="text-span-white" />
                 </div>
-                PTE
+                <Link href={`/testpreparation/IELTS`} className="transition-all duration-300 ease-in-out hover:scale-105">PTE</Link>
               </div>
               <div className="flex items-center gap-4">
                 <div className="h-[12.5px] w-[6.25px] text-span-white">
                   <RiPlayMiniFill className="text-span-white" />
                 </div>
-                IELTS
+
+                <Link href={`/testpreparation/PTE`} className="transition-all duration-300 ease-in-out hover:scale-105">IELTS</Link>
               </div>
               <div className="flex items-center gap-4">
                 <div className="h-[12.5px] w-[6.25px] text-span-white">
                   <RiPlayMiniFill className="text-span-white" />
                 </div>
-                Duolingo
+                <Link href={`/testpreparation/Duolingo`} className="transition-all duration-300 ease-in-out hover:scale-105">Duolingo</Link>
               </div>
             </div>
           </div>

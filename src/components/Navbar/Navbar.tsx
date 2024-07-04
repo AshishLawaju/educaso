@@ -208,7 +208,7 @@ const Navbar = () => {
                       onMouseLeave={() => {
                         setExtendedNav("");
                       }}
-                      className="paragraph-span-small absolute left-[40%] top-[55px]  rounded-b-xl bg-[#fffffe] text-[12px] text-[#000000] transition-all duration-300 ease-in-out"
+                      className="paragraph-span-small absolute left-[40%] top-[55px] rounded-b-xl bg-[#fffffe] text-[12px] text-[#000000] transition-all duration-300 ease-in-out"
                     >
                       <div className="flex flex-col">
                         {studyLink.map((Study: any) =>
@@ -334,7 +334,7 @@ const Navbar = () => {
           ))}
         </ul>
         <Link href={"/contact"}>
-          <button className="whitespace-nowrap rounded-xl bg-gradient-to-b from-[#4453DD] to-[#09117C] px-[22px] py-3 text-background max-xl:hidden">
+          <button className="whitespace-nowrap rounded-xl bg-gradient-to-b from-[#4453DD] to-[#09117C] px-[22px] py-3 text-background hover:from-[#555db5] hover:to-[#383fa2] max-xl:hidden transition-all duration-300 ease-in-out">
             Contact Us
           </button>
         </Link>

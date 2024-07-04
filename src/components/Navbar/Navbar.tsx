@@ -208,7 +208,7 @@ const Navbar = () => {
                       onMouseLeave={() => {
                         setExtendedNav("");
                       }}
-                      className="paragraph-span-small absolute left-[40%] top-[55px] overflow-hidden rounded-b-xl bg-[#fffffe] text-[12px] text-[#000000] transition-all duration-300 ease-in-out"
+                      className="paragraph-span-small absolute left-[40%] top-[55px]  rounded-b-xl bg-[#fffffe] text-[12px] text-[#000000] transition-all duration-300 ease-in-out"
                     >
                       <div className="flex flex-col">
                         {studyLink.map((Study: any) =>

@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import whats from "./assets/whats.png";
 import viber from "./assets/viber.png";
@@ -15,7 +16,15 @@ const Header = () => {
             infoeducasoabroadconsultancy@gmail.com{" "}
           </span>
           <span className="hidden sm:inline"> &nbsp; | &nbsp;</span>
-          <br className="sm:hidden" /> mayakarki020@gmail.com
+          <br className="sm:hidden" />{" "}
+          <a
+            href="#"
+            onClick={() =>
+              (window.location.href = "mailto:mayakarki020@gmail.com")
+            }
+          >
+            mayakarki020@gmail.com
+          </a>
         </p>
         <Link href="tel:+9779848743847" target="_blank">
           <p className="whitespace-nowrap max-lg:hidden">+977 9848743847</p>
@@ -23,7 +32,7 @@ const Header = () => {
 
         <div className="flex flex-col items-center">
           <Link href="tel:+9779848743847" target="_blank">
-          <p className="whitespace-nowrap lg:hidden">+977 9848743847</p>
+            <p className="whitespace-nowrap lg:hidden">+977 9848743847</p>
           </Link>
           <div className="flex gap-x-3 max-lg:mt-2 max-lg:justify-end">
             <Link href="viber://chat?number=9779848743847" target="_blank">

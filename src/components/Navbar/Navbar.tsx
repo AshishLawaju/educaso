@@ -357,7 +357,8 @@ const Navbar = () => {
       <div className="xl:hidden">
         {true && (
           <div
-            className={`absolute left-0 top-0 flex h-[100vh] w-[70%] flex-col justify-center bg-[#fffffe] p-4 text-span-black ${smallNav ? "translate-x-0x opacity-100 transition-all duration-300 ease-out" : "opacity-0x w-0 -translate-x-[999px] transition-all duration-300 ease-in-out"} -z-10`}
+            className={`absolute left-0 top-0 flex h-[100vh] w-[70%]  
+              overflow-y-scroll flex-col pt-[60px] bg-[#fffffe] p-4x  ${smallNav ? "translate-x-0x opacity-100 transition-all duration-300 ease-out" : "opacity-0x w-0 -translate-x-[999px] transition-all duration-300 ease-in-out"} -z-10`}
           >
             <div className="container">
               {navLinks.map((navlink) => (
@@ -367,7 +368,7 @@ const Navbar = () => {
                   onClick={() => setSmallExtendedNav(navlink.name)}
                 >
                   <>
-                    <p className="flex cursor-pointer items-center gap-1">
+                    <p className="flex cursor-pointer items-center gap-1 border-y px-4 py-1 text- ">
                       {!navlink.link ? (
                         <>
                           {navlink.name}{" "}

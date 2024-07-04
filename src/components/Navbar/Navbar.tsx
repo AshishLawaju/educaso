@@ -389,9 +389,9 @@ const Navbar = () => {
                     <>
                       {smallExtendedNav == "Services" &&
                         navlink.name == "Services" && (
-                          <ul className="ml-3 text-sm font-light text-sub-heading">
+                          <ul className="ml-3 text-sm font-light text-sub-heading ">
                             {servicesData.map((serv) => (
-                              <li className="border-b p-1" key={serv.title}>
+                              <li className="ml-3 p-[3px]" key={serv.title}>
                                 <Link
                                   href={`/services/${serv.id}`}
                                   onClick={() => setSmallNav(false)}
@@ -412,7 +412,7 @@ const Navbar = () => {
                             {studyLink.map((serv) => (
                               <li
                                 key={serv.name}
-                                className="border-b p-1"
+                                className=" p-[2px]"
                                 onClick={() => setSmallExtendedNav2(serv.name)}
                               >
                                 <div className="flex items-center gap-1">
@@ -437,7 +437,7 @@ const Navbar = () => {
                                       navlink.name == "Study Abroad" && (
                                         <>
                                           {serv.sublink.map((ser) => (
-                                            <p key={`${ser}`} className="ml-4">
+                                            <p key={`${ser}`} className="ml-4 py-[2px]">
                                               <Link
                                                 onClick={() =>
                                                   setSmallNav(false)
@@ -462,14 +462,14 @@ const Navbar = () => {
                     <>
                       {smallExtendedNav == "Test Preparation" &&
                         navlink.name == "Test Preparation" && (
-                          <ul className="ml-3 text-sm font-light">
+                          <ul className="ml-3 text-sm font-light py-[2px]">
                             {testLink.map((service) => (
                               <Link
                                 onClick={() => setSmallNav(false)}
                                 key={service.id}
                                 href={`/testpreparation/${service.id}`}
                               >
-                                <li className="cursor-pointer border-b border-[#e8e8e8]">
+                                <li className="cursor-pointer  ml-3 py-[2px]">
                                   {service.title}
                                 </li>
                               </Link>

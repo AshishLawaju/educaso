@@ -22,7 +22,9 @@ const Header = () => {
         </Link>
 
         <div className="flex flex-col items-center">
+          <Link href="tel:+9779848743847" target="_blank">
           <p className="whitespace-nowrap lg:hidden">+977 9848743847</p>
+          </Link>
           <div className="flex gap-x-3 max-lg:mt-2 max-lg:justify-end">
             <Link href="viber://chat?number=9779848743847" target="_blank">
               <div className="h-[24px] w-[24px]">

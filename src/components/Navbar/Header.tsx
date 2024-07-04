@@ -17,7 +17,9 @@ const Header = () => {
           <span className="hidden sm:inline"> &nbsp; | &nbsp;</span>
           <br className="sm:hidden" /> mayakarki020@gmail.com
         </p>
-        <p className="whitespace-nowrap max-lg:hidden">+977 9848743847</p>
+        <Link href="tel:+9779848743847" target="_blank">
+          <p className="whitespace-nowrap max-lg:hidden">+977 9848743847</p>
+        </Link>
 
         <div className="flex flex-col items-center">
           <p className="whitespace-nowrap lg:hidden">+977 9848743847</p>

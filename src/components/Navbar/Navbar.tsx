@@ -4,16 +4,36 @@ import logo from "../../assets/logo.png";
 import Link from "next/link";
 import { IoIosArrowDown, IoIosArrowDropleft } from "react-icons/io";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { MdKeyboardArrowRight, MdOutlineArrowDropDown } from "react-icons/md";
 import "./navbar.css";
 import { FiAlignRight } from "react-icons/fi";
 import { GiCrossedBones } from "react-icons/gi";
 import { servicesData } from "@/data/services/services.data";
+import Lenis from "lenis";
 
 const Navbar = () => {
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Clean up on component unmount
+    return () => {
+      // Remove event listener or any cleanup if necessary
+    };
+  }, []);
   const pathname = usePathname();
+
+  // console.log(pathname.split("/")[1]);
+
+  // const pathname2 = pathname.split("/")[1];
+
   const navLinks = [
     {
       name: "Home",
@@ -131,14 +151,17 @@ const Navbar = () => {
             <>
               {navLink.link ? (
                 <Link href={navLink.link}>
-                  <li className="navbarx cursor-pointer" key={navLink.name}>
+                  <li
+                    className={`navbarx cursor-pointer ${pathname == navLink.link ? "activeNav text-primary" : ""}`}
+                    key={navLink.name}
+                  >
                     {navLink.name}
                   </li>
                 </Link>
               ) : (
                 <>
                   <li
-                    className="navbarx flex cursor-pointer items-center gap-2 py-[30px]"
+                    className={`navbarx my-[30px] flex cursor-pointer items-center gap-2 ${pathname.split("/")[1] == navLink.name.toLowerCase().replace(" ", "") ? "activeNav text-primary" : ""}`}
                     key={navLink.name}
                     onMouseEnter={() => {
                       setExtendedNav(navLink.name);
@@ -155,12 +178,12 @@ const Navbar = () => {
                     <div
                       onMouseEnter={() => {
                         setExtendedNav("Services");
-                        console.log(navLink.name);
+                        // console.log(navLink.name);
                       }}
                       onMouseLeave={() => {
                         setExtendedNav("");
                       }}
-                      className="paragraph-span-small absolute left-[20%] top-20 rounded-xl bg-[#fffffe] text-[12px] text-[#000000]"
+                      className="paragraph-span-small absolute left-[20%] top-[55px] overflow-hidden rounded-b-xl bg-[#fffffe] text-[12px] text-[#000000]"
                     >
                       <div className="flex flex-col">
                         {servicesData.map((service) => (
@@ -168,7 +191,7 @@ const Navbar = () => {
                             href={`/services/${service.id}`}
                             key={service.title}
                           >
-                            <p className="cursor-pointer border-b border-[#e8e8e8] px-[44px] py-[10px]">
+                            <p className="cursor-pointer border-b border-[#e8e8e8] px-[44px] py-[10px] transition-all duration-200 ease-in-out hover:bg-primary hover:text-span-white">
                               {service.title}
                             </p>
                           </Link>
@@ -185,7 +208,7 @@ const Navbar = () => {
                       onMouseLeave={() => {
                         setExtendedNav("");
                       }}
-                      className="paragraph-span-small absolute left-[40%] top-20 rounded-xl bg-[#fffffe] text-[12px] text-[#000000]"
+                      className="paragraph-span-small absolute left-[40%] top-[55px] overflow-hidden rounded-b-xl bg-[#fffffe] text-[12px] text-[#000000] transition-all duration-300 ease-in-out"
                     >
                       <div className="flex flex-col">
                         {studyLink.map((Study: any) =>
@@ -193,7 +216,7 @@ const Navbar = () => {
                             <>
                               <p
                                 key={Study.name}
-                                className="relative flex cursor-pointer items-center gap-2 border-b border-[#e8e8e8] px-[44px] py-[10px]"
+                                className="relative flex cursor-pointer items-center gap-2 border-b border-[#e8e8e8] px-[44px] py-[10px] transition-all duration-200 ease-in-out hover:bg-primary hover:text-span-white"
                                 onMouseEnter={() => {
                                   if (Study.name === "Study in Europe") {
                                     setExtendedNav2(true);
@@ -208,16 +231,16 @@ const Navbar = () => {
                                   <>
                                     <MdKeyboardArrowRight className="text-sm" />
                                     {extendedNav2 && (
-                                      <div className="absolute -right-[95%] top-0 rounded-r-xl bg-[#fffffe]">
+                                      <div className="absolute -right-[97%] top-0 overflow-hidden rounded-r-xl bg-[#fffffe] text-paragraph">
                                         {Study.sublink.map((stu: any) => (
                                           <Link
                                             key={stu}
                                             href={`/studyabroad/${stu.id}`}
-                                            className="hover:bg-primary hover:text-span-white"
+                                            className=""
                                           >
                                             <div className="border-b border-[#e8e8e8]">
                                               <p
-                                                className="px-[44px] py-[10px]"
+                                                className="px-[44px] py-[10px] transition-all duration-200 ease-in-out hover:bg-primary hover:text-span-white"
                                                 key={stu}
                                               >
                                                 {stu.name}
@@ -235,7 +258,7 @@ const Navbar = () => {
                             <Link
                               key={Study.name}
                               href={`/studyabroad/${Study.id}`}
-                              className="hover:bg-primary hover:text-span-white"
+                              className="transition-all duration-200 ease-in-out hover:bg-primary hover:text-span-white"
                             >
                               <p
                                 key={Study.name}
@@ -288,15 +311,16 @@ const Navbar = () => {
                       onMouseLeave={() => {
                         setExtendedNav("");
                       }}
-                      className="paragraph-span-small absolute left-[62%] top-20 rounded-xl bg-[#fffffe] text-[12px] text-[#000000]"
+                      className="paragraph-span-small absolute left-[62%] top-[55px] overflow-hidden rounded-b-xl bg-[#fffffe] text-[12px] text-[#000000]"
                     >
                       <div className="flex flex-col">
                         {testLink.map((service) => (
                           <Link
                             key={service.id}
                             href={`/testpreparation/${service.id}`}
+                            className="transition-all duration-200 ease-in-out hover:bg-primary hover:text-span-white"
                           >
-                            <p className="cursor-pointer border-b border-[#e8e8e8] px-[44px] py-[10px]">
+                            <p className="rpun cursor-pointer border-b border-[#e8e8e8] px-[44px] py-[10px]">
                               {service.title}
                             </p>
                           </Link>

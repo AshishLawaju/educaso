@@ -11,23 +11,9 @@ import "./navbar.css";
 import { FiAlignRight } from "react-icons/fi";
 import { GiCrossedBones } from "react-icons/gi";
 import { servicesData } from "@/data/services/services.data";
-import Lenis from "lenis";
 
 const Navbar = () => {
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time: any) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    // Clean up on component unmount
-    return () => {
-      // Remove event listener or any cleanup if necessary
-    };
-  }, []);
+ 
   const pathname = usePathname();
 
   // console.log(pathname.split("/")[1]);

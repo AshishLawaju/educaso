@@ -96,8 +96,8 @@ const Testimonials = () => {
         <div className="mt-16">
           <Slider {...settings}>
             {testimonialsList.map((testo) => (
-              <div key={testo.name}>
-                <div className="flex">
+              <div key={testo.name + testo.rating} className='sm:px-2 sx:px-2' >
+                <div className="flex sm:px-2 xs:px-2">
                   <div className="flex flex-1 flex-col gap-y-3 sm:gap-y-12">
                     <div className="mt-3 flex gap-2">
                       {[...Array(testo.rating)].map((_, index) => {

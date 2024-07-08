@@ -1,5 +1,4 @@
 import canadaImage from './canada.jpg'
-import canadaFlag from './canadaFlag.jpg'
 import germanyImage from '../../../data/studyabroad/assets/breadcum/German.webp'
 import KoreaImage from '../../../data/studyabroad/assets/breadcum/korea.webp'
 import NetherlandImage from '../../../data/studyabroad/assets/breadcum/Netherland.webp'
@@ -10,6 +9,7 @@ import FranceImage from '../../../data/studyabroad/assets/breadcum/France.webp'
 import SwedenImage from '../../../data/studyabroad/assets/breadcum/Sweden.webp'
 import MaltaImage from '../../../data/studyabroad/assets/breadcum/Malta.webp'
 
+import canadaFlag from './canadaFlag.jpg'
 import NetherlandFlag from './nl-flag.gif'
 import DenmarkFlag from './da-flag.gif'
 import PolandFlag from './pl-flag.gif'

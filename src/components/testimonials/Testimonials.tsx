@@ -100,12 +100,13 @@ const Testimonials = () => {
                 <div className="flex">
                   <div className="flex flex-1 flex-col gap-y-3 sm:gap-y-12">
                     <div className="mt-3 flex gap-2">
-                      {[...Array(testo.rating)].map((index) => (
-                        <FaStar
-                          key={`rate ${index}`}
+                      {[...Array(testo.rating)].map((_, index) => {
+                        console.log("index", index)
+                        return <FaStar
+                          key={`rate-${index}`}
                           className="text-[#FFAE43]"
                         />
-                      ))}
+                      })}
                     </div>
                     <p className="text-start text-base font-semibold lg:text-2xl">
                       {testo.description}

@@ -134,7 +134,7 @@ const Navbar = () => {
           <li className="cursor-pointer">Universities</li> */}
 
           {navLinks.map((navLink) => (
-            <>
+            <div key={navLink.name}>
               {navLink.link ? (
                 <Link href={navLink.link}>
                   <li
@@ -163,8 +163,7 @@ const Navbar = () => {
                   {extendedNav == "Services" && (
                     <div
                       onMouseEnter={() => {
-                        setExtendedNav("Services");
-                        // console.log(navLink.name);
+                          setExtendedNav("Services");
                       }}
                       onMouseLeave={() => {
                         setExtendedNav("");
@@ -316,7 +315,7 @@ const Navbar = () => {
                   )}
                 </>
               )}
-            </>
+            </div>
           ))}
         </ul>
         <Link href={"/contact"}>

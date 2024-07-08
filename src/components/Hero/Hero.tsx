@@ -1,11 +1,17 @@
 import hero from "./assets/hero.webp";
-
 import Image from "next/image";
 import Button from "../common/button/Button";
 import Capital from "../Capital/Capital";
+import { motion } from 'framer-motion'
+
 const Hero = () => {
   return (
-    <div className="py-8">
+    <motion.div className="py-8"
+    
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ ease: "easeInOut", duration: 0.75 }}
+    >
       <div
         className="container lg:h-[90vh] rounded-3xl bg-cover bg-center"
         style={{ backgroundImage: `url(${hero.src})` }}
@@ -31,7 +37,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

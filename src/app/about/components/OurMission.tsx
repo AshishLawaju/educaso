@@ -2,8 +2,15 @@ import Capital from "@/components/Capital/Capital";
 import Image from "next/image";
 import mission1 from "./assets/mission1.webp";
 import mission2 from "./assets/mission2.webp";
+import { motion } from 'framer-motion'
 const OurMission = () => {
   return (
+    <motion.div
+      initial={{ x: -40, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      viewport={{ once: false }}
+      transition={{ ease: "easeInOut", duration: 0.75 }}
+    >
     <section className="container flex py-10 sm:py-14  lg:py-[116px]">
       <div className="flex-1 flex justify-center relative max-lg:hidden">
         <Image alt="our mission" src={mission1} className="absolute left-0 -top-16"></Image>
@@ -35,6 +42,7 @@ const OurMission = () => {
         </p>
       </div>
     </section>
+    </motion.div>
   );
 };
 

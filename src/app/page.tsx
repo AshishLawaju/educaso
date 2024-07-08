@@ -1,3 +1,4 @@
+"use client"
 import BlogPage from "@/components/blog/BlogPage";
 import Capital from "@/components/Capital/Capital";
 import BreadCum from "@/components/common/breadcum/BreadCum";
@@ -12,37 +13,25 @@ import Studyabroad from "@/components/studyabroad/Studyabroad";
 import Testimonials from "@/components/testimonials/Testimonials";
 import Whatwedo from "@/components/whatwedo/whatwedo";
 import Whoarewe from "@/components/whoweare/Whoarewe";
-import React from "react";
+import { motion } from 'framer-motion'
 
 const Home = () => {
   return (
     <>
-      <Hero />
 
-  
-      <Whoarewe />
-      <Whatwedo />
-      <Studyabroad />
-      <Growth />
-      <Testimonials />
-      <BlogPage />  
-      <ContactBanner />
-      <ContactUs/>
+      <div>
 
-      {/*    <div className="font-roboto text-3xl text-primary">
-        Everyone has right to freedom
+        <Hero />
+        <Whoarewe />
+        <Whatwedo />
+        <Studyabroad />
+        <Growth />
+        <Testimonials />
+        <BlogPage />
+        <ContactBanner />
+        <ContactUs />
       </div>
-      <div className="font-raleway text-3xl text-paragraph">
-        Everyone has right to freedom
-      </div>
-      <div className="font-exo2x text-3xl">Everyone has right to freedom</div>
-      <div className="font-x text-3xl">Everyone has right to freedom</div>
-      <div className="font-">abcdefghijklmnopqrst ABCD</div>
-      <div className="">abcdefghijklmnopqrst ABCD</div>
-      <div className="main-heading leading-10">
-        <Capital character={""} />
-        pital
-      </div> */}
+
     </>
   );
 };

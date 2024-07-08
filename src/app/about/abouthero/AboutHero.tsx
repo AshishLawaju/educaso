@@ -2,10 +2,15 @@ import aboutus from "../assets/aboutus.webp";
 import Image from "next/image";
 import Capital from "@/components/Capital/Capital";
 import Button from "@/components/common/button/Button";
+import { motion } from 'framer-motion';
 
 const AboutHero = () => {
   return (
-    <div className="py-8">
+    <motion.div className="py-8"
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ ease: "easeInOut", duration: 0.75 }}
+    >
       <div
         className="container lg:h-[90vh] rounded-3xl bg-cover bg-center"
         style={{ backgroundImage: `url(${aboutus.src})` }}
@@ -23,7 +28,7 @@ const AboutHero = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -5,6 +5,7 @@ import Header from "@/components/Navbar/Header";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/common/footer/Footer";
 
+
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,12 +20,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
       <body className={""}>
         <Header />
         <Navbar />
+
+
         {children}
+
         <Footer />
       </body>
+
     </html>
   );
 }

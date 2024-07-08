@@ -7,6 +7,7 @@ import university from "./assets/UNIVERSITY.webp";
 import visa from "./assets/VISA.webp";
 import Capital from "../Capital/Capital";
 import Readmore from "../common/button/readmore/Readmore";
+import { motion } from 'framer-motion'
 
 const Whatwedo = () => {
   const whatwedoData = [
@@ -46,6 +47,7 @@ const Whatwedo = () => {
           ))}
         </div>
         <div className="flex  max-sm:mt-8 flex-1 items-center text-start lg:justify-center">
+        <motion.div>
           <div className="lg:w-[70%]">
             <h3 className="small-sub-heading text-primary">
               <span className="leading-4">
@@ -58,6 +60,7 @@ const Whatwedo = () => {
             </h2>
             <Readmore />
           </div>
+        </motion.div>
         </div>
       </div>
     </section>

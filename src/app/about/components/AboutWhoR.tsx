@@ -1,9 +1,16 @@
 import Capital from "@/components/Capital/Capital";
 import Image from "next/image";
 import aboutwho from "./assets/aboutwho.webp";
+import { motion } from 'framer-motion';
 const AboutWhoR = () => {
   return (
-    <section className="container flex py:10 sm:py-20  lg:py-[116px] gap-[94px]">
+    <motion.div
+      initial={{x:40, opacity: 0 }}
+      whileInView={{x:0, opacity: 1 }}
+      viewport={{ once: false }}
+      transition={{ ease: "easeInOut", duration: 0.75 }}
+    >
+      <section className="container flex py:10 sm:py-20  lg:py-[116px] gap-[94px]">
       <div className="flex-1">
         <h3 className="small-sub-heading capitalize text-primary">
           <span className="leading-5">
@@ -31,6 +38,7 @@ const AboutWhoR = () => {
         <Image src={aboutwho} alt="about educaso" className=""></Image>
       </div>
     </section>
+    </motion.div>
   );
 };
 

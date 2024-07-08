@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import AboutHero from "./abouthero/AboutHero";
 import AboutWhoR from "./components/AboutWhoR";
@@ -14,7 +15,7 @@ const AboutUs = () => {
       <AboutHero />
       <AboutWhoR />
 
-  {/*     <div
+      {/*     <div
         className="h-[50vh] w-full  bg-fixed bg-center lg:hiddenx"
         style={{ backgroundImage: `url(${aboutbanner.src})` }}
       >

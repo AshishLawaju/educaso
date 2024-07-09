@@ -119,7 +119,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <ul className="relative flex items-center gap-x-8 whitespace-nowrap text-[16px] text-span-black max-xl:hidden">
+        <ul className="relative flex items-center gap-x-8 whitespace-nowrap text-[14px] text-span-black max-xl:hidden">
           {/*  <li className="cursor-pointer">Home</li>
           <li className="cursor-pointer">About Us</li>
           <li className="cursor-pointer flex gap-2 items-center">
@@ -319,7 +319,7 @@ const Navbar = () => {
           ))}
         </ul>
         <Link href={"/contact"}>
-          <button className="whitespace-nowrap rounded-xl bg-gradient-to-b from-[#4453DD] to-[#09117C] px-[22px] py-3 text-background hover:from-[#555db5] hover:to-[#383fa2] max-xl:hidden transition-all duration-300 ease-in-out">
+          <button className="whitespace-nowrap rounded-xl bg-gradient-to-b from-[#4453DD] to-[#09117C] px-[22px] py-3 text-background hover:from-[#555db5] hover:to-[#383fa2] max-xl:hidden transition-all duration-300 ease-in-out text-[14px]">
             Contact Us
           </button>
         </Link>

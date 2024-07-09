@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="bg-primary">
       <main className="gap-x-32x container flex flex-col justify-between gap-y-10 py-12 text-background lg:flex-row">
         <div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-start">
             <div className="flex h-[32px] w-[32px] items-center justify-center rounded-full border">
               <FaRegEnvelope />
             </div>
@@ -31,14 +31,14 @@ const Footer = () => {
               <p>mayakarki020@gmail.com</p>
             </div>
           </div>
-          <div className="mt-5 flex gap-2">
+          <div className="mt-5 flex gap-2 items-center">
             <div className="flex h-[32px] w-[32px] items-center justify-center rounded-full border">
               <MdOutlineLocalPhone />
             </div>
             +977 9848743847
           </div>
 
-          <div className="mt-4 flex gap-2">
+          <div className="mt-4 flex gap-2 items-center">
             <div className="flex h-[32px] w-[32px] items-center justify-center rounded-full border">
               <LuMapPin />
             </div>
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="justify-between sm:flex lg:w-[53%]">
+        <div className="justify-between sm:flex lg:w-[53%] text-span-white">
           <div>
             <h3 className="small-sub-heading text-background">Study Abroad</h3>
             <hr className="mt-3 w-[30%] border-[1.5px] border-background" />

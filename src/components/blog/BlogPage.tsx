@@ -12,7 +12,7 @@ const BlogPage = () => {
             </span>
             LOGS
           </h3>
-          <h2 className="sub-heading">
+          <h2 className="sub-heading sm:mt-3">
             Recent Articles on Events, Offers, <br /> and Activities
           </h2>
         </div>

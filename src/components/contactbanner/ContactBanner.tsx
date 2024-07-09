@@ -8,7 +8,7 @@ const ContactBanner = () => {
           <h2 className="sub-heading text-background lg:w-[55%]">
             There&apos;s a University waiting to fulfil your study goals
           </h2>
-          <p className="mt-2 w-[80%] lg:mt-3 lg:w-[60%]">
+          <p className="mt-2 w-[80%] lg:mt-3 lg:w-[60%] text-span-white">
             Get expert advice on choosing education institutes, addressing the
             admissions process, scholarships, etc.
           </p>

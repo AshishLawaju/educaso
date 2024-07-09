@@ -49,7 +49,7 @@ const ContactUs = () => {
           <h3 className="small-sub-heading text-primary">
             Contact us for more Information
           </h3>
-          <hr className="mt-3 w-full border border-primary" />
+          <hr className="mt-3 w-full  border-[0.5px] border-primary" />
           <div className="mt-6 text-primary">
             <div className="flex gap-2">
               <div className="flex h-[32px] w-[32px] items-center justify-center rounded-full border">
@@ -61,14 +61,14 @@ const ContactUs = () => {
                 <p>mayakarki020@gmail.com</p>
               </div>
             </div>
-            <div className="mt-5 flex gap-2">
+            <div className="mt-5 flex gap-2 items-center">
               <div className="flex h-[32px] w-[32px] items-center justify-center rounded-full border">
                 <MdOutlineLocalPhone />
               </div>
               +977 9848743847
             </div>
 
-            <div className="mt-4 flex gap-2">
+            <div className="mt-4 flex gap-2 items-center">
               <div className="flex h-[32px] w-[32px] items-center justify-center rounded-full border">
                 <LuMapPin />
               </div>
@@ -80,7 +80,7 @@ const ContactUs = () => {
             <h3 className="small-sub-heading text-primary">
               Follow our social media
             </h3>
-            <hr className="mt-3 w-full border border-primary" />
+            <hr className="mt-3 w-full borderx border-[0.5px] border-primary" />
 
             <div className="mt-6 flex gap-x-3">
               <Image src={instagram} alt="instagram"></Image>

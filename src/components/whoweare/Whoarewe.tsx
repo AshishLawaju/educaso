@@ -13,15 +13,15 @@ const Whoarewe = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ ease: "easeInOut", duration: 0.75 }}
     >
-      <section className="py:8 container flex justify-between max-lg:flex-col sm:py-10 lg:py-[180px]">
-        <div className="flex-1x lg:w-[41%]">
-          <h3 className="small-sub-heading capitalize text-primary">
+      <section className="py-8 container flex justify-between max-lg:flex-col sm:py-10 lg:py-[180px]">
+        <div className="flex-1x lg:w-[41%] ">
+          <h3 className="small-sub-heading capitalize  text-primary">
             <span className="leading-5">
               <Capital character="w" />
             </span>
             ho are we!
           </h3>
-          <h2 className="sub-heading  mt-3 sm:mt-6 text-primary">
+          <h2 className="sub-heading  mt-3  text-primary">
             Elevate Your Education <br className="max-lg:hidden" />
             Worldwide
           </h2>

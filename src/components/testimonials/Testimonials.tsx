@@ -89,7 +89,7 @@ const Testimonials = () => {
             </span>
             ESTIMONIALS
           </h3>
-          <h2 className="sub-heading text-primary">
+          <h2 className="sub-heading text-primary sm:mt-3">
             What our students says about us
           </h2>
         </div>
@@ -114,13 +114,14 @@ const Testimonials = () => {
                     <p className="text-start">{testo.name}</p>
                   </div>
 
-                  <div className="flex h-[385px] w-[355px] flex-1 justify-end max-sm:hidden">
-                    <Image
+                  <div className="flex h-[385px] w-[355px] flex-1 justify-end max-sm:hidden  ">
+          
+                  <Image
                       src={testo.photo}
                       alt="profile"
                       height={385}
                       width={355}
-                      className="object-cover"
+                      className="object-cover object-center rounded-lg overflow-hidden"
                     ></Image>
                   </div>
                 </div>

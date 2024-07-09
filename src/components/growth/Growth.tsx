@@ -19,7 +19,7 @@ const Growth = () => {
             <h2 className="font-raleway text-[22px] font-bold leading-tight sm:text-[32px] lg:text-[48px]">
               Accelerating your academic growth overseas
             </h2>
-            <p className="mt-3">
+            <p className="mt-3 text-span-white">
               Our education consultants can support with excellence in guidance
               with education and visa consultancy in Nepal. We&apos;ve been
               growing since 2003 with over 50 branches across 15 countries. You

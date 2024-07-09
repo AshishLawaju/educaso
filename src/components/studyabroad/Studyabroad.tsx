@@ -164,7 +164,7 @@ const Studyabroad = () => {
     return (
       <div
         className={
-          "absolute -top-24 right-16 flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-lg border-2 border-primary hover:bg-primary hover:text-[#ffffff] max-lg:hidden"
+          "absolute -top-24 right-16 flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-xl border-2 border-primary hover:bg-primary hover:text-[#ffffff] max-lg:hidden"
         }
         onClick={onClick}
       >
@@ -219,7 +219,7 @@ const Studyabroad = () => {
             </span>
             TUDY ABOARD!
           </h3>
-          <h2 className="sub-heading text-primary">
+          <h2 className="sub-heading text-primary mt-3">
             We bring you an invaluable opportunity for studying abroad
           </h2>
         </div>

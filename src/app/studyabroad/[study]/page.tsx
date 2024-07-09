@@ -43,7 +43,7 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
         path={` / Study Abroad / ${currentStudy?.title}`}
       />
 
-      <div className="container flex flex-col items-center gap-x-[116px] py-[32px] max-lg:gap-8 sm:py-[60px] lg:flex-row lg:py-[100px]">
+      <div className="container flex flex-col items-center gap-x-[116px] py-[32px] max-lg:gap-8 sm:py-[60px] lg:flex-row lg:py-16">
         <div className="lg:basis-3/5">
           {currentStudy?.description1.split("\n").map((para) => (
             <p key={para} className="mt-3">
@@ -54,7 +54,7 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
         <div className="container lg:basis-2/5">
           <div className="h-[472] w-[434]">
             <Image
-              className="h-full w-full"
+              className="h-full w-full overflow-hidden rounded-lg"
               src={`${currentStudy!.educasoImage.src}`}
               alt={`${currentStudy?.title}`}
               width={434}
@@ -64,12 +64,12 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
         </div>
       </div>
 
-      <div className="container flex lg:gap-[135px]">
-        <div className="h-[329px] w-[489px] flex-1 max-lg:hidden">
+      <div className="container flex lg:gap-[135px]  items-center">
+        <div className="h-[329px] w-[489px] flex-1 max-lg:hidden ">
           <Image
             src={studyhere}
             alt="best consaltancy"
-            className="h-full w-full"
+            className="h-full w-full "
           ></Image>
         </div>
         <div className="flex-1">
@@ -81,7 +81,7 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
         </div>
       </div>
 
-      <div className="my-20 flex flex-wrap justify-center gap-4 bg-[#f7f7ff] py-10 sm:py:16 lg:py-20 sm:justify-between">
+      <div className="sm:py:16 my-20 flex flex-wrap justify-center gap-4 bg-[#f7f7ff] py-10 sm:justify-between lg:py-20">
         <h3 className="small-sub-heading w-full text-center">
           Studying in {currentStudy?.title} offers several compelling reasons
           for international students:
@@ -91,9 +91,9 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
             <div
               key={chat}
               style={{ backgroundImage: `url(${chatImage.src})` }}
-              className="flex h-[150px] w-[263px] items-center justify-center"
+              className="flex h-[150px] w-[263px]  justify-center"
             >
-              <p className="w-[50%] text-center text-primary">{chat}</p>
+              <p className="w-[50%] text-center text-primary mb-[22px]  flex items-center justify-center">{chat}</p>
             </div>
           ))}
         </div>
@@ -107,7 +107,7 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
             </span>
             ducation System
           </h3>
-          <h3 className="small-sub-heading text-primary">
+          <h3 className="small-sub-heading text-primary mt-3">
             The most popular programs in {currentStudy?.title} are:
           </h3>
 
@@ -125,12 +125,12 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
         <div className="relative justify-end lg:flex lg:w-[50%]">
           <div className="h-[441px] w-[398px] max-lg:hidden">
             <Image
-              className="h-full w-full "
+              className="rounded-xl overflow-hidden h-full w-full"
               alt={`${currentStudy?.title}`}
               src={currentStudy!.educationImage}
             ></Image>
           </div>
-          <div className="-bottom-5 w-full lg:absolute max-lg:pb-10">
+          <div className="-bottom-5 w-full max-lg:pb-10 lg:absolute">
             <StudyTesti testi={currentStudy!.educationDialog} />
           </div>
         </div>

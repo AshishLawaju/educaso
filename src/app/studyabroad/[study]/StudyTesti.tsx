@@ -2,7 +2,7 @@ import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 
 const StudyTesti = ({ testi }: { testi: string }) => {
   return (
-    <div className="rounded-3xl bg-primary px-[55px] py-[41px] text-background ">
+    <div className="rounded-xl bg-primary px-[55px] py-[41px] text-background ">
       <p className="relative">
         {testi}
 

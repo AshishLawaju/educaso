@@ -12,11 +12,11 @@ const AboutHero = () => {
       transition={{ ease: "easeInOut", duration: 0.75 }}
     >
       <div
-        className="container lg:h-[90vh] rounded-3xl bg-cover bg-center"
+        className="container lg:h-[85vh] rounded-3xl bg-cover bg-center"
         style={{ backgroundImage: `url(${aboutus.src})` }}
       >
         <div className="sm:pl-12 flex flex-col justify-center h-full max-lg:py-8">
-          <h1 className="main-heading font-raleway">
+          <h1 className="main-heading font-raleway text-primary">
             <span className="leading-10">
               <Capital character="A" />
             </span>

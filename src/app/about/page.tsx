@@ -11,7 +11,7 @@ import Image from "next/image";
 import aboutbanner from "./assets/aboutbanner.webp";
 const AboutUs = () => {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <AboutHero />
       <AboutWhoR />
 
@@ -25,7 +25,10 @@ const AboutUs = () => {
       <Testimonials />
 
       <Pathway />
+      <div className="max-sm:py-8">
+
       <ContactBanner />
+      </div>
     </main>
   );
 };

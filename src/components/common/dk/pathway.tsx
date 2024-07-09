@@ -7,7 +7,7 @@ import Button from "@/components/common/button/Button";
 const Pathway = () => {
   return (
     <section className="bg-primary">
-        <div className="text-white container flex flex-col gap-8 py-8 sm:py-14 lg:flex-row lg:gap-[125px] lg:py-32">
+        <div className="text-white container flex flex-col gap-8 py-8 sm:py-14 lg:flex-row lg:gap-[125px] lg:py-36">
           <div className="lg:w:191px] flex-1">
             <div
               data-aos="fade-up"

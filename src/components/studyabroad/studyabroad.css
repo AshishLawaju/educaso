@@ -1,5 +1,6 @@
 .slick-slider {
     margin:0 -15px;
+    /* margin: auto; */
 }
 .slick-slide {
     /* padding:10px; */
@@ -8,3 +9,8 @@
     /* margin-right:12px; */
     /* margin-left:12px; */
 }
+/* .slick-track {
+    margin:auto;
+     display: flex;
+  justify-content: center;
+} */

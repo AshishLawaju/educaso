@@ -122,8 +122,8 @@ const ContactUs = () => {
                 <div className="mt-5 flex max-xl:flex-col justify-between gap-6">
                   <div className="flex flex-col ">
                     <label htmlFor="">
-                      First Name{" "}
-                      <span className="text-[#a3a3a3]">(required)</span>
+                      First Name{" "}{" "}
+                      <span className="text-[#a3a3a3] ml-2 text-[14px]">(required)</span>
                     </label>
                     <Field
                       type="text"
@@ -139,7 +139,7 @@ const ContactUs = () => {
                   <div className="flex flex-col">
                     <label htmlFor="">
                       Last Name
-                      <span className="text-[#a3a3a3]">(required)</span>
+                      <span className="text-[#a3a3a3] ml-2 text-[14px]">(required)</span>
                     </label>
                     <Field
                       type="text"
@@ -158,7 +158,7 @@ const ContactUs = () => {
                   <div className="flex flex-col">
                     <label htmlFor="">
                       Email
-                      <span className="text-[#a3a3a3]">(required)</span>
+                      <span className="text-[#a3a3a3] ml-2 text-[14px]">(required)</span>
                     </label>
                     <Field
                       type="email"
@@ -174,7 +174,7 @@ const ContactUs = () => {
                   <div className="flex flex-col">
                     <label htmlFor="">
                       Contact
-                      <span className="text-[#a3a3a3]">(required)</span>
+                      <span className="text-[#a3a3a3] ml-2 text-[14px]">(required)</span>
                     </label>
                     <Field
                       type="number"
@@ -192,7 +192,7 @@ const ContactUs = () => {
                 <div className="mt-5 flex flex-col">
                   <label htmlFor="">
                     Subject
-                    <span className="text-[#a3a3a3]">(required)</span>
+                    <span className="text-[#a3a3a3] ml-2 text-[14px]">(required)</span>
                   </label>
                   <Field
                     type="text"
@@ -208,7 +208,7 @@ const ContactUs = () => {
                 <div className="mt-5 flex flex-col">
                   <label htmlFor="">
                     Message
-                    <span className="text-[#a3a3a3]">(required)</span>
+                    <span className="text-[#a3a3a3] ml-2 text-[14px]">(required)</span>
                   </label>
                   <Field
                     as="textarea"

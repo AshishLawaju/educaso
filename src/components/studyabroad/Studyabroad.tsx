@@ -189,7 +189,7 @@ const Studyabroad = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -201,7 +201,7 @@ const Studyabroad = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 639,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -224,7 +224,7 @@ const Studyabroad = () => {
           </h2>
         </div>
 
-        <div className="mt-8">
+        <div className="mt-8 ">
           <Slider {...settings}>
             {studyabroadData.map((studyabroad) => {
               return (

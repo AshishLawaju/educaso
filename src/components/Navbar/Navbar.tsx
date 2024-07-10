@@ -11,9 +11,11 @@ import "./navbar.css";
 import { FiAlignRight } from "react-icons/fi";
 import { GiCrossedBones } from "react-icons/gi";
 import { servicesData } from "@/data/services/services.data";
+import { CiMenuFries } from "react-icons/ci";
+import { RiCloseLargeLine, RiMenuFold4Line } from "react-icons/ri";
+import { HiMenuAlt2 } from "react-icons/hi";
 
 const Navbar = () => {
- 
   const pathname = usePathname();
 
   // console.log(pathname.split("/")[1]);
@@ -112,7 +114,8 @@ const Navbar = () => {
   const [smallExtendedNav2, setSmallExtendedNav2] = useState("");
   return (
     <nav className="sticky top-0 z-50 bg-[#fffffe] shadow-sm">
-      <div className="container relative flex items-center justify-between max-xl:py-4 max-sm:py-3">
+      <div className="container relative flex items-center justify-between max-xl:flex-row-reverse max-xl:py-4 max-sm:py-3">
+        <div className="w-[25%] xl:hidden"></div>
         <div className="h-[36px] w-[132px] cursor-pointer">
           <Link href={"/"}>
             <Image src={logo} alt="educaso" className="h-full w-full"></Image>
@@ -163,7 +166,7 @@ const Navbar = () => {
                   {extendedNav == "Services" && (
                     <div
                       onMouseEnter={() => {
-                          setExtendedNav("Services");
+                        setExtendedNav("Services");
                       }}
                       onMouseLeave={() => {
                         setExtendedNav("");
@@ -319,7 +322,7 @@ const Navbar = () => {
           ))}
         </ul>
         <Link href={"/contact"}>
-          <button className="whitespace-nowrap rounded-xl bg-gradient-to-b from-[#4453DD] to-[#09117C] px-[22px] py-3 text-background hover:from-[#555db5] hover:to-[#383fa2] max-xl:hidden transition-all duration-300 ease-in-out text-[14px]">
+          <button className="whitespace-nowrap rounded-xl bg-gradient-to-b from-[#4453DD] to-[#09117C] px-[22px] py-3 text-[14px] text-background transition-all duration-300 ease-in-out hover:from-[#555db5] hover:to-[#383fa2] max-xl:hidden">
             Contact Us
           </button>
         </Link>
@@ -327,13 +330,15 @@ const Navbar = () => {
         {/* small navbar start here @ */}
         <div className="xl:hidden">
           {smallNav ? (
-            <GiCrossedBones
-              className="cursor-pointer text-[19px] text-primary"
-              onClick={() => setSmallNav((pre) => !pre)}
-            />
+            <div className="w-[24px]">
+              <RiCloseLargeLine
+                className="cursor-pointer text-[19px] text-[#000]"
+                onClick={() => setSmallNav((pre) => !pre)}
+              />
+            </div>
           ) : (
-            <FiAlignRight
-              className="cursor-pointer text-[24px] text-primary"
+            <HiMenuAlt2
+              className="cursor-pointer text-[24px] font-bold text-primary"
               onClick={() => setSmallNav((pre) => !pre)}
             />
           )}
@@ -342,8 +347,7 @@ const Navbar = () => {
       <div className="xl:hidden">
         {true && (
           <div
-            className={`absolute left-0 top-0 flex h-[100vh] w-[70%]  
-              overflow-y-scroll flex-col pt-[60px] bg-[#fffffe] p-4x  ${smallNav ? "translate-x-0x opacity-100 transition-all duration-300 ease-out" : "opacity-0x w-0 -translate-x-[999px] transition-all duration-300 ease-in-out"} -z-10`}
+            className={`p-4x absolute left-0 top-0 flex h-[100vh] w-[70%] flex-col overflow-y-scroll bg-[#fffffe] pt-[60px] ${smallNav ? "translate-x-0x opacity-100 transition-all duration-300 ease-out" : "opacity-0x w-0 -translate-x-[999px] transition-all duration-300 ease-in-out"} -z-10`}
           >
             <div className="container">
               {navLinks.map((navlink) => (
@@ -353,7 +357,7 @@ const Navbar = () => {
                   onClick={() => setSmallExtendedNav(navlink.name)}
                 >
                   <>
-                    <p className="flex cursor-pointer items-center gap-1 border-y px-4 py-1 text- ">
+                    <p className="text- flex cursor-pointer items-center gap-1 border-y px-4 py-1">
                       {!navlink.link ? (
                         <>
                           {navlink.name}{" "}
@@ -374,7 +378,7 @@ const Navbar = () => {
                     <>
                       {smallExtendedNav == "Services" &&
                         navlink.name == "Services" && (
-                          <ul className="ml-3 text-sm font-light text-sub-heading ">
+                          <ul className="ml-3 text-sm font-light text-sub-heading">
                             {servicesData.map((serv) => (
                               <li className="ml-3 p-[3px]" key={serv.title}>
                                 <Link
@@ -397,7 +401,7 @@ const Navbar = () => {
                             {studyLink.map((serv) => (
                               <li
                                 key={serv.name}
-                                className=" p-[2px]"
+                                className="p-[2px]"
                                 onClick={() => setSmallExtendedNav2(serv.name)}
                               >
                                 <div className="flex items-center gap-1">
@@ -422,7 +426,10 @@ const Navbar = () => {
                                       navlink.name == "Study Abroad" && (
                                         <>
                                           {serv.sublink.map((ser) => (
-                                            <p key={`${ser}`} className="ml-4 py-[2px]">
+                                            <p
+                                              key={`${ser}`}
+                                              className="ml-4 py-[2px]"
+                                            >
                                               <Link
                                                 onClick={() =>
                                                   setSmallNav(false)
@@ -447,14 +454,14 @@ const Navbar = () => {
                     <>
                       {smallExtendedNav == "Test Preparation" &&
                         navlink.name == "Test Preparation" && (
-                          <ul className="ml-3 text-sm font-light py-[2px]">
+                          <ul className="ml-3 py-[2px] text-sm font-light">
                             {testLink.map((service) => (
                               <Link
                                 onClick={() => setSmallNav(false)}
                                 key={service.id}
                                 href={`/testpreparation/${service.id}`}
                               >
-                                <li className="cursor-pointer  ml-3 py-[2px]">
+                                <li className="ml-3 cursor-pointer py-[2px]">
                                   {service.title}
                                 </li>
                               </Link>

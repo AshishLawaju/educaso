@@ -336,13 +336,13 @@ const Navbar = () => {
             <>
               <div className="">
                 <RiCloseLargeLine
-                  className={`${smallNav ? "scale-100 " : "scale-0 h-0"} transition-all duration-300 ease-in-out cursor-pointer text-[20px] text-[#000]`}
+                  className={`${smallNav ? "scale-110" : "scale-0 h-0"} transition-all duration-300 ease-in-out cursor-pointer text-[20px] text-[#000]`}
                   onClick={() => setSmallNav((pre) => !pre)}
                 />
               </div>
 
               <HiMenuAlt2
-                className={`${smallNav ? "scale-0 h-0" : "scale-1"} transition-all duration-300 ease-in-out cursor-pointer text-[26px] font-bold text-primary`}
+                className={`${smallNav ? "scale-0 h-0" : "scale-105"} transition-all duration-300 ease-in-out cursor-pointer text-[26px] font-bold text-primary`}
                 onClick={() => setSmallNav((pre) => !pre)}
               />
             </>
@@ -362,7 +362,7 @@ const Navbar = () => {
                   onClick={() => setSmallExtendedNav(navlink.name)}
                 >
                   <>
-                    <p className="text- flex cursor-pointer items-center gap-1 border-y px-4 py-1">
+                    <p className="text- flex cursor-pointer items-center gap-1 border-y px-4 py-2">
                       {!navlink.link ? (
                         <>
                           {navlink.name}{" "}

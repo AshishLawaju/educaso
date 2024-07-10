@@ -115,7 +115,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-[#fffffe] shadow-sm">
       <div className="container relative flex items-center justify-between max-xl:flex-row-reverse max-xl:py-4 max-sm:py-3">
-        <div className="w-[25%] xl:hidden"></div>
+        <div className="w-[22%] xl:hidden"></div>
         <div className="h-[36px] w-[132px] cursor-pointer">
           <Link href={"/"}>
             <Image src={logo} alt="educaso" className="h-full w-full"></Image>

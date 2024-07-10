@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <nav className="bg-red-500 bg-primary font-light text-background">
+    <nav className="bg-red-500 bg-primary font-light text-background max-sm:hidden">
       <div className="container flex justify-between py-[14px] text-[12px]">
         <p>
           infoeducasoabroad@gmail.com <br className="sm:hidden" />{" "}

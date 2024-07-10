@@ -21,6 +21,7 @@ const SinglePageUniversity = ({
   // console.log("after university");
 
   return (
+    <>
     <main className="container pt-8 pb-16x max-sm:text-[14px] ">
       <h1 className="sub-heading text-primary">{university?.universityName}</h1>
 
@@ -37,11 +38,12 @@ const SinglePageUniversity = ({
           {text}
         </p>
       ))}
+    </main>
 <div className="max-sm:py-10">
 
       <ContactBanner/>
 </div>
-    </main>
+</>
   );
 };
 

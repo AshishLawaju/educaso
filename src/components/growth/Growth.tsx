@@ -44,7 +44,7 @@ const Growth = () => {
             <p   className="text-center font-light text-background">
               INTERNATIONAL STUDENTS <br /> ASSISTED
             </p>
-            <p  ref={ref}className="sub-heading mt-3 text-span-white">     <>{counterOn && <CountUp end={100000} />}+</>+</p>
+            <p  ref={ref}className="sub-heading mt-3 text-span-white">     <>{counterOn && <CountUp end={500} />}+</></p>
           </div>
 
           <div>
@@ -53,7 +53,7 @@ const Growth = () => {
               APPROVED
             </p>
             <p className="sub-heading mt-3 text-span-white">
-              <>{counterOn && <CountUp end={100} />}+</>
+              <>{counterOn && <CountUp end={200} />}+</>
             </p>
           </div>
           <div>
@@ -61,7 +61,7 @@ const Growth = () => {
               ENROLLED IN <br />
               IELTS/PTE PREPARATION CLASSES
             </p>
-            <p className="sub-heading mt-3 text-span-white">     <>{counterOn && <CountUp end={100000} />}+</>+</p>
+            <p className="sub-heading mt-3 text-span-white">     <>{counterOn && <CountUp end={300} />}+</></p>
           </div>
         </div>
       </div>

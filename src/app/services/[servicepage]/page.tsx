@@ -32,7 +32,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ params }) => {
         title={myservice?.title}
         path={` / Services / ${myservice?.title}`}
       />
-      <div className="container flex items-center justify-between py-10 sm:py-14 lg:pt-16 lg:pb-0" >
+      <div className="container flex items-center justify-between py-10 sm:py-14 lg:pt-16 lg:pb-0 max-sm:text-[14px]" >
         <div className="lg:basis-3/5">
           {/* {myservice?.title} */}
           <p>{myservice?.description}</p>

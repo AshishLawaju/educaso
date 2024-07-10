@@ -23,7 +23,7 @@ const SingleBlogPage = ({ params }: { params: { blogId: string } }) => {
   return (
     <>
       {blog && (
-        <section className="bg-[#f7f7f7] pb-[64px] pt-10  lg:pt-[160px]x">
+        <section className="bg-[#f7f7f7] pb-[64px] pt-10  lg:pt-[160px]x max-sm:text-[14px]">
           <div className="container text-[#484747]  flex flex-col gap-4 sm:gap-8 lg:gap-16">
             <div>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold lg:max-w-[60%]">

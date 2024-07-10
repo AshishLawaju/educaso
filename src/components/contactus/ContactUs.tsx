@@ -44,8 +44,8 @@ const ContactUs = () => {
     "w-full lg:min-w-[270px] h-[44px] rounded-lg outline-none py-3 px-2 border border-[#a5a5a5] lg:mt-2 ";
   return (
     <section className=" xl:py-[56px] max-xl:py-10">
-      <div className="container flex max-xl:flex-col-reverse max-xl:gap-y-10 justify-between">
-        <div>
+      <div className="container flex max-xl:flex-col-reverse max-xl:gap-y-10 justify-between ">
+        <div className="max-sm:hidden">
           <h3 className="small-sub-heading text-primary">
             Contact us for more Information
           </h3>
@@ -76,7 +76,7 @@ const ContactUs = () => {
             </div>
           </div>
 
-          <div className="mt-[18px]">
+          <div className="mt-[18px] ">
             <h3 className="small-sub-heading text-primary">
               Follow our social media
             </h3>

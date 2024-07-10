@@ -36,7 +36,7 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
   const pathname = usePathname();
 
   return (
-    <section className="py-8">
+    <section className="py-8 max-sm:text-[14px]">
       <BreadCum
         photo={currentStudy?.breadcumPhoto}
         title={currentStudy?.title}

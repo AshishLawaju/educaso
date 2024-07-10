@@ -11,7 +11,7 @@ import Image from "next/image";
 import aboutbanner from "./assets/aboutbanner.webp";
 const AboutUs = () => {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden max-sm:text-[14px]">
       <AboutHero />
       <AboutWhoR />
 

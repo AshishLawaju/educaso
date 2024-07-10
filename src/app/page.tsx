@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
 
-      <div>
+      <main className="max-sm:text-[14px]">
 
         <Hero />
         <Whoarewe />
@@ -30,7 +30,7 @@ const Home = () => {
         <BlogPage />
         <ContactBanner />
         <ContactUs />
-      </div>
+      </main>
 
     </>
   );

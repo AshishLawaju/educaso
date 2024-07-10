@@ -28,7 +28,7 @@ const TestPrepartion = ({ params }: testPreparationType) => {
   // console.log(currentTest);
 
   return (
-    <main className="py-8">
+    <main className="py-8 max-sm:text-[14px]">
       {
         <div className="">
           <BreadCum

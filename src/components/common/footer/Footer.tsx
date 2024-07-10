@@ -31,8 +31,8 @@ const Footer = () => {
   return (
     <footer className="bg-primary">
       <main className="gap-x-32x container flex flex-col justify-between gap-y-10 py-12 text-background lg:flex-row">
-        <div>
-          <div className="flex items-start gap-2">
+        <div className="">
+          <div className="flex items-start gap-2 ">
             <div className="flex h-[32px] w-[32px] items-center justify-center rounded-full border">
               <FaRegEnvelope />
             </div>

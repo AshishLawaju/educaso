@@ -14,40 +14,40 @@ import "slick-carousel/slick/slick-theme.css";
 const Testimonials = () => {
   const testimonialsList = [
     {
-      name: "Joe Christensen",
+      name: "Sarita Shrestha",
       description:
-        "Great job, I will definitely be ordering again! LookScout is worth much more than I paid.  I would like to personally thank you.",
+        "Educaso's language preparation programs helped me develop fluency in Korean. The structured curriculum and supportive instructors made learning enjoyable and effective.",
       rating: 5,
       photo: testi11,
     },
     {
-      name: "Emily Johnson",
+      name: "Rajesh Maharjan",
       description:
-        "DK Solutions polished our brand's presentation with quality packaging. We're thrilled with the results.",
+        "I am thankful to Educaso for their expert guidance in obtaining my I-20 form. They made the process straightforward and ensured all my documents were in order.",
       rating: 5,
       photo: testi16,
     },
-
     {
-      name: "Mateusz Kowalski",
+      name: "Anjali Thapa",
       description:
-        "DK Solutions' spotless cleaning services exceeded our expectations. Standout professionalism in the industry.",
+        "The interview preparation classes at Educaso were invaluable. They provided me with the skills and confidence to excel in my university admission interview.",
       rating: 5,
       photo: testi12,
     },
     {
-      name: "Anna Nowak",
+      name: "Prakash Acharya",
       description:
-        "DK Solutions provided exceptional manpower solutions, ensuring our success within deadlines. Outstanding service!",
+        "Educaso's scholarship assistance was crucial in securing funding for my studies abroad. Their support and advice helped me navigate the scholarship application process successfully.",
       rating: 5,
       photo: testi14,
     },
   ];
+
   function SampleNextArrow(props: any) {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`text-blue border-primary text-primary hover:bg-primary hover:text-[#fff] absolute bottom-20 left-12 flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-md border-2 max-lg:hidden`}
+        className={`text-blue max-lg:hiddenx absolute bottom-0 left-16 flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-md border-2 border-primary text-primary hover:bg-primary hover:text-[#fff] max-sm:-bottom-12 max-sm:right-0`}
         onClick={onClick}
       >
         <FaArrowRightLong className=" " />
@@ -59,7 +59,7 @@ const Testimonials = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`text-blue border-primary text-primary hover:bg-primary hover:text-[#ffffff] absolute bottom-20 left-0 z-10 flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-md border-2 max-lg:hidden`}
+        className={`text-blue max-lg:hiddenx absolute bottom-0 left-4 z-10 flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-md border-2 border-primary text-primary hover:bg-primary hover:text-[#ffffff] max-sm:-bottom-12 max-sm:right-0`}
         onClick={onClick}
       >
         <FaArrowLeftLong className=" " />
@@ -80,7 +80,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-[#fefdfd]">
+    <section className="bg-[#fefdfd] max-sm:mb-10">
       <div className="container py-10 sm:py-20 lg:py-[112px]">
         <div className="text-center">
           <h3 className="small-sub-heading text-primary">
@@ -96,16 +96,17 @@ const Testimonials = () => {
         <div className="mt-8 md:mt-16">
           <Slider {...settings}>
             {testimonialsList.map((testo) => (
-              <div key={testo.name + testo.rating} className='sm:px-2 ' >
-                <div className="flex sm:px-2 xs:px-2z">
+              <div key={testo.name + testo.rating} className="sm:px-2">
+                <div className="xs:px-2z flex sm:px-2">
                   <div className="flex flex-1 flex-col gap-y-3 sm:gap-y-12">
                     <div className="mt-3 flex gap-2">
                       {[...Array(testo.rating)].map((_, index) => {
-
-                        return <FaStar
-                          key={`rate-${index}`}
-                          className="text-[#FFAE43]"
-                        />
+                        return (
+                          <FaStar
+                            key={`rate-${index}`}
+                            className="text-[#FFAE43]"
+                          />
+                        );
                       })}
                     </div>
                     <p className="text-start text-base font-semibold lg:text-2xl">
@@ -114,14 +115,13 @@ const Testimonials = () => {
                     <p className="text-start">{testo.name}</p>
                   </div>
 
-                  <div className="flex h-[385px] w-[355px] flex-1 justify-end max-sm:hidden  ">
-          
-                  <Image
+                  <div className="flex h-[385px] w-[355px] flex-1 justify-end max-sm:hidden">
+                    <Image
                       src={testo.photo}
                       alt="profile"
                       height={385}
                       width={355}
-                      className="object-cover object-center rounded-lg overflow-hidden"
+                      className="overflow-hidden rounded-lg object-cover object-center"
                     ></Image>
                   </div>
                 </div>

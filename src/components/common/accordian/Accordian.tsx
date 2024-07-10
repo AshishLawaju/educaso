@@ -53,7 +53,7 @@ const Accordian = ({ accData }: AccordionProps) => {
             setAccoID(aq.ques);
           }}
         >
-          <h2 className="flex items-start justify-end text-[#484747]">
+          <h2 className="flex items-start justify-end text-[#484747] gap-1 sm:gap-2">
             {aq.ques}
 
             <div className="">

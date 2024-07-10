@@ -1,3 +1,4 @@
+"use client"
 import { useRouter } from "next/navigation";
 import Button from "../common/button/Button";
 

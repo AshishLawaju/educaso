@@ -36,16 +36,16 @@ const Whatwedo = () => {
     },
   ];
   return (
-    <section className="bg-[#f7f7ff] my-8 sm:py-14 lg:py-[116px]">
+    <section className=" my-8 bg-[#f7f7ff] sm:py-14 lg:py-[116px]">
       <div className="container flex max-lg:flex-col-reverse max-lg:gap-8">
-        <div className="grid flex-1 grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3 place-content-center place-items-center">
+        <div className="grid flex-1 grid-cols-1 place-content-center place-items-center gap-3 sm:grid-cols-2 xl:grid-cols-3 max-sm:pb-10">
           {whatwedoData.map((whatwedo) => (
             <div key={whatwedo.title} className="w-full">
               <Whatwedocard title={whatwedo.title} image={whatwedo.image} />
             </div>
           ))}
         </div>
-        <div className="flex  max-sm:mt-8 flex-1 items-center text-start lg:justify-center">
+        <div className="flex flex-1 items-center text-start max-sm:mt-8 lg:justify-center">
           <div className="lg:w-[70%]">
             <h3 className="small-sub-heading text-primary">
               <span className="leading-4">

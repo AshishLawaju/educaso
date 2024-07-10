@@ -16,7 +16,7 @@ const StudyCard = ({
   subtitle,
 }: studyCardType) => {
   return (
-    <div className="relative h-[462px]  sm:w-[295px] overflow-hidden rounded-t-3xl bg-[#ffffff] shadow-sm">
+    <div className="relative h-[462px] max-sm:mx-[6px]  sm:w-[295px] overflow-hidden rounded-t-3xl bg-[#ffffff] shadow-sm">
       <div className="h-[180px] w-full sm:w-[295px]">
         <Image
           src={backgroundImage}

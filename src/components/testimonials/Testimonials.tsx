@@ -81,7 +81,7 @@ const Testimonials = () => {
 
   return (
     <section className="bg-[#fefdfd]">
-      <div className="container py-[112px]">
+      <div className="container py-10 sm:py-20 lg:py-[112px]">
         <div className="text-center">
           <h3 className="small-sub-heading text-primary">
             <span className="leading-4">
@@ -93,7 +93,7 @@ const Testimonials = () => {
             What our students says about us
           </h2>
         </div>
-        <div className="mt-16">
+        <div className="mt-8 md:mt-16">
           <Slider {...settings}>
             {testimonialsList.map((testo) => (
               <div key={testo.name + testo.rating} className='sm:px-2 ' >

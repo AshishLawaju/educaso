@@ -24,7 +24,7 @@ const Hero = () => {
             </span>
             nlock a Better Future!
           </h1>
-          <p className="mt-3 text-paragraph lg:w-[40%]">
+          <p className="mt-3 sm:text-paragraph lg:w-[40%]">
             Embark on a transformative educational journey with our{" "}
             <br className="max-lg:hidden" /> expert guidance and unlock a world
             of opportunities in <br className="max-lg:hidden" /> your dream

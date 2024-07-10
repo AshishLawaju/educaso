@@ -331,20 +331,22 @@ const Navbar = () => {
         </Link>
 
         {/* small navbar start here @ */}
-        <div className="xl:hidden">
-          {smallNav ? (
-            <div className="w-[24px]">
-              <RiCloseLargeLine
-                className="cursor-pointer text-[19px] text-[#000]"
+        <div className="transition-all duration-300 ease-in-out xl:hidden">
+          {
+            <>
+              <div className="">
+                <RiCloseLargeLine
+                  className={`${smallNav ? "scale-100 " : "scale-0 h-0"} transition-all duration-300 ease-in-out cursor-pointer text-[20px] text-[#000]`}
+                  onClick={() => setSmallNav((pre) => !pre)}
+                />
+              </div>
+
+              <HiMenuAlt2
+                className={`${smallNav ? "scale-0 h-0" : "scale-1"} transition-all duration-300 ease-in-out cursor-pointer text-[26px] font-bold text-primary`}
                 onClick={() => setSmallNav((pre) => !pre)}
               />
-            </div>
-          ) : (
-            <RxHamburgerMenu    
-              className="cursor-pointer text-[24px] font-bold text-primary"
-              onClick={() => setSmallNav((pre) => !pre)}
-            />
-          )}
+            </>
+          }
         </div>
       </div>
       <div className="xl:hidden">

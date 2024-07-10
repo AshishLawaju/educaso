@@ -120,9 +120,9 @@ const Navbar = () => {
 
   // console.log(smallref.current);
 
-/*   useEffect(() => {
+  useEffect(() => {
     function handler(event: any) {
-      console.log(smallref.current);
+      // console.log(smallref.current);
       if (smallref.current && !smallref.current.contains(event.target as Node)) {
         setSmallNav(false);
       }
@@ -131,9 +131,9 @@ const Navbar = () => {
     
     window.addEventListener("click", handler);
     return () => window.removeEventListener("click", handler);
-  }, []); */
+  }, []);
   return (
-    <nav className="sticky top-0 z-50 bg-[#fffffe] shadow-sm">
+    <nav ref={smallref} className="sticky top-0 z-50 bg-[#fffffe] shadow-sm">
       <div className="container relative flex items-center justify-between max-xl:flex-row-reverse max-xl:py-4 max-sm:py-3">
         <div className="w-[22%] xl:hidden"></div>
         <div className="h-[36px] w-[132px] cursor-pointer">

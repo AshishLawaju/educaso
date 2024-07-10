@@ -1,3 +1,4 @@
+import ContactBanner from "@/components/contactbanner/ContactBanner";
 import { universityData } from "@/data/services/university.data";
 import Image from "next/image";
 
@@ -20,7 +21,7 @@ const SinglePageUniversity = ({
   // console.log("after university");
 
   return (
-    <main className="container py-8 pb-16">
+    <main className="container pt-8 pb-16x">
       <h1 className="sub-heading text-primary">{university?.universityName}</h1>
 
       <div className="mt-6  lg:h-[583px] w-full">
@@ -36,6 +37,8 @@ const SinglePageUniversity = ({
           {text}
         </p>
       ))}
+
+      <ContactBanner/>
     </main>
   );
 };

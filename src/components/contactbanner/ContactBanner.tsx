@@ -1,6 +1,8 @@
+import { useRouter } from "next/navigation";
 import Button from "../common/button/Button";
 
 const ContactBanner = () => {
+  const router = useRouter()
   return (
     <section className="container py-10x sm:py-40x lg:py-[116px]">
       <div className="flex flex-col items-center justify-between rounded-3xl bg-primary p-[32px] sm:p-[60px] text-background max-lg:justify-start lg:flex-row">
@@ -13,11 +15,12 @@ const ContactBanner = () => {
             admissions process, scholarships, etc.
           </p>
         </div>
-        <div className="max-lg:w-full max-lg:mt-4 whitespace-nowrap">
+        <div className="max-lg:w-full max-lg:mt-4 whitespace-nowrap" onClick={()=>router.push("/contact")}>
           <Button
             buttonTittle={"Contact Us"}
             backgroundColors={"ffffff"}
             textColors={"#09117C"}
+            
           />
         </div>
       </div>

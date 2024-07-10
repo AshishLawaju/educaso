@@ -56,7 +56,7 @@ const Whatwedo = () => {
             <h2 className="sub-heading mt-3 text-primary">
               We make your study abroad dreams a simpler reality
             </h2>
-            <Readmore />
+            {/* <Readmore /> */}
           </div>
         </div>
       </div>

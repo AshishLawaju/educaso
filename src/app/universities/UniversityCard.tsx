@@ -14,7 +14,7 @@ const UniversityCard = ({ photo, name, flag, id }: universitiesCardType) => {
 
   return (
     <div
-      className="relative cursor-pointer overflow-hidden h-full rounded-t-3xl shadow-md"
+      className="relative cursor-pointer overflow-hidden h-full rounded-t-3xl shadow-sm"
       onClick={() => router.push(`/universities/${id}`)}
     >
       <div className="w-[389px]x h-[250px] w-full">

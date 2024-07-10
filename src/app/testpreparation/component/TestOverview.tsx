@@ -14,7 +14,7 @@ const TestOverview = ({
       <div className="flex-1">
         <h3 className="small-sub-heading">
           <span className="leading-5">
-            <Capital character={`${title[0]}`} />
+            <Capital character={` ${title[0]}`} />
           </span>
           {title.slice(1)} Overview
         </h3>

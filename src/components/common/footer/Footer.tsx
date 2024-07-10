@@ -1,4 +1,7 @@
+"use client";
+import Lenis from "lenis";
 import Link from "next/link";
+import { useEffect } from "react";
 import { BiSolidRightArrow } from "react-icons/bi";
 import { FaRegEnvelope } from "react-icons/fa";
 import { LuMapPin } from "react-icons/lu";
@@ -6,6 +9,16 @@ import { MdOutlineLocalPhone } from "react-icons/md";
 import { RiPlayMiniFill } from "react-icons/ri";
 
 const Footer = () => {
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   const studyabroadData = [
     { name: "Study in USA", id: "UnitedStates" },
     { name: "Study in UK", id: "UnitedKingdom" },
@@ -19,8 +32,8 @@ const Footer = () => {
     <footer className="bg-primary">
       <main className="gap-x-32x container flex flex-col justify-between gap-y-10 py-12 text-background lg:flex-row">
         <div>
-          <div className="flex gap-2 items-start ">
-            <div className="flex h-[32px]   w-[32px] items-center justify-center rounded-full border">
+          <div className="flex items-start gap-2">
+            <div className="flex h-[32px] w-[32px] items-center justify-center rounded-full border">
               <FaRegEnvelope />
             </div>
             <div>
@@ -31,14 +44,14 @@ const Footer = () => {
               <p>mayakarki020@gmail.com</p>
             </div>
           </div>
-          <div className="mt-5 flex gap-2 items-center">
+          <div className="mt-5 flex items-center gap-2">
             <div className="flex h-[32px] w-[32px] items-center justify-center rounded-full border">
               <MdOutlineLocalPhone />
             </div>
             +977 9848743847
           </div>
 
-          <div className="mt-4 flex gap-2 items-center">
+          <div className="mt-4 flex items-center gap-2">
             <div className="flex h-[32px] w-[32px] items-center justify-center rounded-full border">
               <LuMapPin />
             </div>
@@ -46,7 +59,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="justify-between sm:flex lg:w-[53%] text-span-white">
+        <div className="justify-between text-span-white sm:flex lg:w-[53%]">
           <div>
             <h3 className="small-sub-heading text-background">Study Abroad</h3>
             <hr className="mt-3 w-[30%] border-[1.5px] border-background" />
@@ -77,20 +90,35 @@ const Footer = () => {
                 <div className="h-[12.5px] w-[6.25px] text-span-white">
                   <RiPlayMiniFill className="text-span-white" />
                 </div>
-                <Link href={`/testpreparation/IELTS`} className="transition-all duration-300 ease-in-out hover:scale-105">PTE</Link>
+                <Link
+                  href={`/testpreparation/IELTS`}
+                  className="transition-all duration-300 ease-in-out hover:scale-105"
+                >
+                  PTE
+                </Link>
               </div>
               <div className="flex items-center gap-4">
                 <div className="h-[12.5px] w-[6.25px] text-span-white">
                   <RiPlayMiniFill className="text-span-white" />
                 </div>
 
-                <Link href={`/testpreparation/PTE`} className="transition-all duration-300 ease-in-out hover:scale-105">IELTS</Link>
+                <Link
+                  href={`/testpreparation/PTE`}
+                  className="transition-all duration-300 ease-in-out hover:scale-105"
+                >
+                  IELTS
+                </Link>
               </div>
               <div className="flex items-center gap-4">
                 <div className="h-[12.5px] w-[6.25px] text-span-white">
                   <RiPlayMiniFill className="text-span-white" />
                 </div>
-                <Link href={`/testpreparation/Duolingo`} className="transition-all duration-300 ease-in-out hover:scale-105">Duolingo</Link>
+                <Link
+                  href={`/testpreparation/Duolingo`}
+                  className="transition-all duration-300 ease-in-out hover:scale-105"
+                >
+                  Duolingo
+                </Link>
               </div>
             </div>
           </div>

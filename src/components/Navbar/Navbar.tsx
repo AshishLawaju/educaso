@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png";
 import Link from "next/link";
 import { IoIosArrowDown, IoIosArrowDropleft } from "react-icons/io";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { MdKeyboardArrowRight, MdOutlineArrowDropDown } from "react-icons/md";
 import "./navbar.css";
@@ -115,6 +115,23 @@ const Navbar = () => {
   const [smallNav, setSmallNav] = useState(false);
   const [smallExtendedNav, setSmallExtendedNav] = useState("");
   const [smallExtendedNav2, setSmallExtendedNav2] = useState("");
+
+  const smallref = useRef<HTMLDivElement>(null);
+
+  // console.log(smallref.current);
+
+/*   useEffect(() => {
+    function handler(event: any) {
+      console.log(smallref.current);
+      if (smallref.current && !smallref.current.contains(event.target as Node)) {
+        setSmallNav(false);
+      }
+    }
+
+    
+    window.addEventListener("click", handler);
+    return () => window.removeEventListener("click", handler);
+  }, []); */
   return (
     <nav className="sticky top-0 z-50 bg-[#fffffe] shadow-sm">
       <div className="container relative flex items-center justify-between max-xl:flex-row-reverse max-xl:py-4 max-sm:py-3">
@@ -331,18 +348,21 @@ const Navbar = () => {
         </Link>
 
         {/* small navbar start here @ */}
-        <div className="transition-all duration-300 ease-in-out xl:hidden">
+        <div
+          
+          className="transition-all duration-300 ease-in-out xl:hidden"
+        >
           {
             <>
               <div className="">
                 <RiCloseLargeLine
-                  className={`${smallNav ? "scale-110" : "scale-0 h-0"} transition-all duration-300 ease-in-out cursor-pointer text-[20px] text-[#000]`}
+                  className={`${smallNav ? "scale-110" : "h-0 scale-0"} cursor-pointer text-[20px] text-[#000] transition-all duration-300 ease-in-out`}
                   onClick={() => setSmallNav((pre) => !pre)}
                 />
               </div>
 
               <HiMenuAlt2
-                className={`${smallNav ? "scale-0 h-0" : "scale-105"} transition-all duration-300 ease-in-out cursor-pointer text-[26px] font-bold text-primary`}
+                className={`${smallNav ? "h-0 scale-0" : "scale-105"} cursor-pointer text-[26px] font-bold text-primary transition-all duration-300 ease-in-out`}
                 onClick={() => setSmallNav((pre) => !pre)}
               />
             </>
@@ -351,10 +371,10 @@ const Navbar = () => {
       </div>
       <div className="xl:hidden">
         {true && (
-          <div
-            className={`p-4x absolute left-0 top-0 flex h-[100vh] w-[70%] flex-col overflow-y-scroll bg-[#fffffe] pt-[60px] ${smallNav ? "translate-x-0x opacity-100 transition-all duration-300 ease-out" : "opacity-0x w-0 -translate-x-[999px] transition-all duration-300 ease-in-out"} -z-10`}
+          <div 
+            className={`p-4x absolute left-0 top-0 flex h-[100vh] w-[70%] flex-col overflow-y-scroll bg-[#fffffe] pt-[60px] ${smallNav ? "translate-x-0x opacity-100 transition-all duration-300 ease-out" : "opacity-0x w-0 -translate-x-[999px] transition-all duration-300 ease-in-out"} -z-10 shadow-2xl`}
           >
-            <div className="container">
+            <div  className="container">
               {navLinks.map((navlink) => (
                 <div
                   className=""
@@ -432,7 +452,7 @@ const Navbar = () => {
                                         <>
                                           {serv.sublink.map((ser) => (
                                             <p
-                                              key={`${ser}`}
+                                              key={`${ser.id}`}
                                               className="ml-4 py-[2px]"
                                             >
                                               <Link

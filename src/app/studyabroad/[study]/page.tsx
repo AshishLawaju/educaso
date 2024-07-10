@@ -130,7 +130,7 @@ const StudyAboardPage: React.FC<studyAboradPageType> = ({ params }) => {
               src={currentStudy!.educationImage}
             ></Image>
           </div>
-          <div className="-bottom-5 w-full max-lg:pb-10 lg:absolute">
+          <div className="-bottom-5 w-full max-lg:pb-10 lg:absolute max-sm:hidden">
             <StudyTesti testi={currentStudy!.educationDialog} />
           </div>
         </div>

@@ -45,7 +45,7 @@ const Accordian = ({ accData }: AccordionProps) => {
       {accData.map((aq) => (
         <div
           key={aq?.ques}
-          className="mt-4 cursor-pointer rounded-xl px-8 py-6 shadow-lg"
+          className="mt-4 cursor-pointer rounded-xl px-3 sm:px-8 py-4 sm:py-6 shadow-lg"
           onClick={() => {
             if (accoID == aq?.ques) {
               return setAccoID("");
@@ -53,11 +53,16 @@ const Accordian = ({ accData }: AccordionProps) => {
             setAccoID(aq.ques);
           }}
         >
-          <h2 className="flex items-start justify-between text-[#484747]">
-            {aq.ques}{" "}
-            <GoPlus
-              className={`text-lg ${accoID === aq.ques ? "rotate-45" : "rotate-0"} transition-all duration-500 ease-in-out`}
-            />
+          <h2 className="flex items-start justify-end text-[#484747]">
+            {aq.ques}
+
+            <div className="">
+              <div className="h-[40px] w-[40px]">
+                <GoPlus
+                  className={`text-lg ${accoID === aq.ques ? "rotate-45 scale-110" : "rotate-0"} transition-all duration-500 ease-in-out`}
+                />
+              </div>
+            </div>
           </h2>
 
           {

@@ -9,11 +9,14 @@ import { FaChevronRight } from "react-icons/fa";
 import { MdKeyboardArrowRight, MdOutlineArrowDropDown } from "react-icons/md";
 import "./navbar.css";
 import { FiAlignRight } from "react-icons/fi";
-import { GiCrossedBones } from "react-icons/gi";
+import { GiCrossedBones, GiHamburgerMenu } from "react-icons/gi";
 import { servicesData } from "@/data/services/services.data";
 import { CiMenuFries } from "react-icons/ci";
 import { RiCloseLargeLine, RiMenuFold4Line } from "react-icons/ri";
 import { HiMenuAlt2 } from "react-icons/hi";
+import { BsMenuUp } from "react-icons/bs";
+import { TiThMenuOutline } from "react-icons/ti";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -337,7 +340,7 @@ const Navbar = () => {
               />
             </div>
           ) : (
-            <HiMenuAlt2
+            <RxHamburgerMenu    
               className="cursor-pointer text-[24px] font-bold text-primary"
               onClick={() => setSmallNav((pre) => !pre)}
             />

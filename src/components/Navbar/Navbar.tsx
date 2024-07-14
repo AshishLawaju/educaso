@@ -17,6 +17,7 @@ import { HiMenuAlt2 } from "react-icons/hi";
 import { BsMenuUp } from "react-icons/bs";
 import { TiThMenuOutline } from "react-icons/ti";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoArrowBackSharp } from "react-icons/io5";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -355,7 +356,7 @@ const Navbar = () => {
           {
             <>
               <div className="">
-                <RiCloseLargeLine
+                <IoArrowBackSharp
                   className={`${smallNav ? "scale-110" : "h-0 scale-0"} cursor-pointer text-[20px] text-[#000] transition-all duration-300 ease-in-out`}
                   onClick={() => setSmallNav((pre) => !pre)}
                 />

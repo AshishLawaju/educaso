@@ -9,7 +9,7 @@ import { MdOutlineLocalPhone } from "react-icons/md";
 import { RiPlayMiniFill } from "react-icons/ri";
 
 const Footer = () => {
-  useEffect(() => {
+  /* useEffect(() => {
     const lenis = new Lenis();
     function raf(time: any) {
       lenis.raf(time);
@@ -17,7 +17,7 @@ const Footer = () => {
     }
 
     requestAnimationFrame(raf);
-  }, []);
+  }, []); */
 
   const studyabroadData = [
     { name: "Study in USA", id: "UnitedStates" },

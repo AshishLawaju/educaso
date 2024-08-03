@@ -1,35 +1,59 @@
-import aboutus from "../assets/aboutus.webp";
-import Image from "next/image";
-import Capital from "@/components/Capital/Capital";
-import Button from "@/components/common/button/Button";
-import { motion } from 'framer-motion';
-
-const AboutHero = () => {
+import Image from "next/image"
+import heroImg from "../abouthero/assets/hero.png"
+import { FaArrowRight } from "react-icons/fa";
+const Hero = () => {
   return (
-    <motion.div className="py-8"
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ ease: "easeInOut", duration: 0.75 }}
-    >
-      <div
-        className="container lg:h-[85vh] rounded-3xl bg-cover bg-center"
-        style={{ backgroundImage: `url(${aboutus.src})` }}
-      >
-        <div className="sm:pl-12 flex flex-col justify-center h-full max-lg:py-8">
-          <h1 className="main-heading font-raleway text-primary">
-            <span className="leading-10">
-              <Capital character="A" />
-            </span>
-            bout Us!
-          </h1>
-          <p className="mt-3 w-[80%] lg:w-[39%] text-paragraph">
-            Craft a path to world-class education with our tailored consultancy
-            services, guiding you towards your dream university and beyond.
+    <>
+      <div className="all bg-[#09117C] lg:flex justify-between 2xl:px-[170px] xl:px-[50px] lg:px-[20px] ">
+
+        <div className="left-side xl:pt-[206px] lg:pt-[200px] sm:pt-[100px] pt-[50px]">
+
+          <div className="sub_heading xl:text-[45px] sm:text-[35px] text-[25px] text-[#FEFDFD] font-semibold lg:text-left text-center">
+            <h1 className="text-span-white text-[48px]">
+              <span className="bg-span-white text-[#09117C] pl-0 pb-0 text-[50px]">A</span>bout Us
+            </h1>
+          </div>
+
+          <p className="text-[#E2E2E2] mt-[24px] lg:w-[398px] lg:text-left text-center lg:mx-0 sm:mx-[100px] mx-[30px]">
+            Craft a path to world-class education with our tailored consultancy services, guiding you towards your dream university and beyond.
           </p>
+
+          <div className="btn hidden lg:block xl:pt-[100px] pt-[80px] ">
+            <button className="border-2 border-[#FEFDFD] rounded-[6px] text-[#FEFDFD] px-5 py-2 flex items-center">
+              BOOK AN APPOINTMENT <FaArrowRight className="ml-2" />
+            </button>
+          </div>
+        </div>
+
+
+        <div className="right_side xl:pt-[65px] pt-[60px] pb-[79px]">
+
+          <div className="bg-[#FFFFFF] absolute px-[20px] py-[20px] mt-[4  0px]  rounded-[12px]">
+            <h1 className="text-[14px]">Visa Approval Rate</h1>
+
+            <div className="bg-[#DDDDDD] w-[200px] h-[4px] mt-3 rounded-[33px]">
+              <p className="bg-[#09117C] w-[189px] h-[4px] rounded-[33px]"></p>
+            </div>
+            <p className="pt-2">89%</p>
+          </div>
+
+
+          <div className=" flex lg:justify-normal justify-center">
+            <Image className="xl:w-[599px] xl:h-[542px] " src={heroImg} alt="heroImage" />
+          </div>
+
+
+
+          <div className="btn flex justify-center  lg:hidden xl:pt-[100px] pt-[80px] ">
+            <button className="border-2 border-[#FEFDFD] rounded-[6px] text-[#FEFDFD] px-5 py-2 flex items-center">
+              BOOK AN APPOINTMENT <FaArrowRight className="ml-2" />
+            </button>
+          </div>
+
         </div>
       </div>
-    </motion.div>
-  );
-};
 
-export default AboutHero;
+    </>
+  )
+}
+export default Hero

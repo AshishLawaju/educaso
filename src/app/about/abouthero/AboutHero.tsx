@@ -28,13 +28,13 @@ const Hero = () => {
 
         <div className="right_side xl:pt-[65px] pt-[60px] pb-[79px]">
 
-          <div className="bg-[#FFFFFF] absolute px-[20px] py-[20px] mt-[4  0px]  rounded-[12px]">
-            <h1 className="text-[14px]">Visa Approval Rate</h1>
+          <div className="bg-[#FFFFFF] absolute lg:px-[20px] sm:px-[15px] px-[7px] lg:py-[20px] sm:py-[15px] py-[7px] sm:mt-[40px]  md:ml-[100px] sm:ml-[50px] ml-[15px] rounded-[12px]">
+            <h1 className="sm:text-[14px] text-[12px]">Visa Approval Rate</h1>
 
-            <div className="bg-[#DDDDDD] w-[200px] h-[4px] mt-3 rounded-[33px]">
-              <p className="bg-[#09117C] w-[189px] h-[4px] rounded-[33px]"></p>
+            <div className="bg-[#DDDDDD] sm:w-[200px] w-[150px] h-[4px] mt-3 rounded-[33px]">
+              <p className="bg-[#09117C] sm:w-[189px] w-[120px] h-[4px] rounded-[33px]"></p>
             </div>
-            <p className="pt-2">89%</p>
+            <p className="pt-2 sm:text-[14px] text-[12px]">89%</p>
           </div>
 
 
